@@ -11,14 +11,24 @@
 <head>
     <title>情</title>
     <link rel="stylesheet" type="text/css" href="moon/l.css">
+    <script src="moon/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".bordr2").hide(0,function(){
+                $(".d").click(function(){
+                    $(".bordr2").toggle(1000);
+                });
+            })
+        });
+    </script>
 </head>
 <body>
 <div class="dz">
-    <div class="d">
-        <a>登录</a>
-    </div>
     <div class="z">
-        注册
+        <a class="dz">注册</a>
+    </div>
+    <div class="d">
+        <a class="dz">登录</a>
     </div>
 </div>
 <div class="bordr">

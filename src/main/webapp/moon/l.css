@@ -17,6 +17,7 @@ div.bordr2{
     top:150px;
     word-warp: break-word;
 }
+/* 登录和注册按钮*/
 div.dz{
     position: absolute;
     width: 180px;
@@ -30,8 +31,6 @@ div.d{
     height: 60px;
     right:-1px;
     top:-1px;
-    border: 1px solid #7b7b7b;
-    background-color: #79ff79;
     text-align:center;
 }
 div.z{
@@ -40,25 +39,24 @@ div.z{
     height: 60px;
     left:1px;
     top:-1px;
-    border: 1px solid #7b7b7b;
-    background-color: #79ff79;
     text-align:center;
 }
-a:link,a:visited
+a.dz
 {
     display:block;
-    width:120px;
     font-weight:bold;
-    color:#FFFFFF;
-    background-color:#bebebe;
+    font-size: 200%;
+    color: #00ffff;
+    background-color:#2894ff;
     text-align:center;
     padding:4px;
     text-decoration:none;
-    text-transform:uppercase;
+    border: 1px solid ;
+    border-radius: 1em;
 }
-a:hover,a:active
-{
-    background-color:#cc0000;
+a.dz:hover{
+    color: #ffff37;
+    background-color: #ffa6ff;
 }
 p.tit{
     text-align:center;
