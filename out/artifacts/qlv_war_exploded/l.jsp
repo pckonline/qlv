@@ -14,11 +14,20 @@
     <script src="moon/jquery.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
+            $(".bordr3").hide(0,function(){
+                $(".z").click(function(){
+                    $(".bordr2").hide(1000,function(){
+                        $(".bordr3").toggle(1000);
+                    });
+                });
+            });
             $(".bordr2").hide(0,function(){
                 $(".d").click(function(){
-                    $(".bordr2").toggle(1000);
+                    $(".bordr3").hide(1000,function(){
+                        $(".bordr2").toggle(1000);
+                    });
                 });
-            })
+            });
         });
     </script>
 </head>
@@ -32,10 +41,13 @@
     </div>
 </div>
 <div class="bordr">
-    <p class="tit">dffffff	</p>
+    <p class="tit">dffffff</p>
     <p class="bod">萨克激发了将萨拉咖啡的建立卡萨节点三大类反馈急啊上来看将大幅来可是记得了符空间阿三来看待将弗兰克时间啊登录咖啡机拉萨可将</p>
 </div>
 <div class="bordr2">
+
+</div>
+<div class="bordr3">
 
 </div>
 </body>

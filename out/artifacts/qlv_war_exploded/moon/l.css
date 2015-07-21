@@ -17,6 +17,15 @@ div.bordr2{
     top:150px;
     word-warp: break-word;
 }
+div.bordr3{
+    position: absolute;
+    border: 3px solid #ff0000;
+    width: 400px;
+    height: 500px;
+    right:100px;
+    top:150px;
+    word-warp: break-word;
+}
 /* 登录和注册按钮*/
 div.dz{
     position: absolute;
