@@ -1,7 +1,6 @@
 /*  l的一些样式 */
 div.bordr{
     position: absolute;
-    border: 3px solid #7b7b7b;
     width: 400px;
     height: 500px;
     left:100px;
@@ -10,9 +9,9 @@ div.bordr{
 }
 div.bordr2{
     position: absolute;
-    border: 3px solid #7b7b7b;
-    width: 400px;
-    height: 500px;
+    background-color: #ececff;
+    width: 370px;
+    height: 380px;
     right:100px;
     top:150px;
     word-warp: break-word;
@@ -67,6 +66,58 @@ a.dz:hover{
     color: #ffff37;
     background-color: #ffa6ff;
 }
+/*登录界面*/
+div.log{
+    padding-left: 30px;
+}
+.input{
+    outline: none;
+    width: 300px;
+    height: 40px;
+    font-size: 200%;
+    color: #bebebe;
+}
+.sub{
+    position: relative;
+    bottom: -65px;
+    display:block;
+    width:300px;
+    height: 40px;
+    font-weight:bold;
+    color:#FFFFFF;
+    background-color:#4efeb3;
+    text-align:center;
+    font-size: 150%;
+    border-radius: 0.5em;
+}
+.change{
+    display:block;
+    width:150px;
+    height: 40px;
+    font-weight:bold;
+    color:#FFFFFF;
+    background-color:#4efeb3;
+    font-size: 150%;
+    float: right;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 0.5em;
+}
+div.vali{
+    width: 300px;
+    position: relative;
+    bottom: 53px;
+    left: 6px;
+    float: left;
+}
+.welcome{
+    position: relative;
+    bottom: -32px;
+    left: 106px;
+    color: #bebebe;
+}
+/**/
 p.tit{
     text-align:center;
     font-weight:900;

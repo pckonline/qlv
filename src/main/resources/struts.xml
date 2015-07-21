@@ -11,9 +11,8 @@
 
 <struts>
     <package name="applyRoom" extends="struts-default" >
-        <action name="Login_*" class="action.LoginAction" method="{1}">
-            <result name="success"> </result>
-            <result name="error">index.jsp</result>
+        <action name="Login_*" class="cm.action.LoginAction" method="{1}">
+            <result name="success">index.jsp</result>
         </action>
     </package>
 </struts>
