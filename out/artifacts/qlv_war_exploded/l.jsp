@@ -34,6 +34,18 @@
             var imgEle=document.getElementById("img");
             imgEle.src ="Login_img?a="+new Date().getTime();
         }
+        var pl;
+        function d(a){
+            if(a.value=="u&p"|| a.value=="validation"){
+                pl= a.value;
+                a.value="";
+            }
+        }
+        function b(a){
+            if(a.value==""){
+                a.value=pl;
+            }
+        }
     </script>
 </head>
 <body style="background-color: #7afec6">
@@ -54,9 +66,9 @@
             <div class="log">
                 <s:form name="log" action="Login_login">
                     <s:actionmessage/><br/>
-                    <s:textfield cssClass="input" name="username" value="u&p" /><br/>
+                    <s:textfield cssClass="input" id="input1" onfocus="d(this)" onblur="b(this)" name="username" value="u&p" /><br/>
                     <s:password cssClass="input" name="password" /><br/>
-                    <s:textfield cssClass="input" name="verfi" value="validation"/>
+                    <s:textfield cssClass="input" id="input2" onfocus="d(this)" onblur="b(this)"  name="verfi" value="validation"/>
                     <s:submit cssClass="sub" value="Login"/>
                 </s:form>
                 <div class="vali">
