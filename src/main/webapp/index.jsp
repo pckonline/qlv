@@ -9,6 +9,8 @@
 <html>
 <head>
     <title>情旅会</title>
+    <meta name="keywords" content="情旅会,爱情旅,聚会更方便,love,tourism,party" />
+    <meta name="description" content=""/>
     <link rel="stylesheet" type="text/css" href="moon/test.css">
 </head>
 <body style="background-color: #caffff">
@@ -16,7 +18,7 @@
     <div class="menu">
         <ul>
             <div>
-                <li><img src="sc/log.gif" /></li>
+                <li><img src="sc/log.gif" alt="爱情旅游聚会" /></li>
             </div>
             <div>
                 <li><a class="change1" href="l.jsp">情</a></li>

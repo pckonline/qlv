@@ -49,7 +49,7 @@ public class LoginAction extends ActionSupport {
         VerCode ver =new VerCode();
         ActionContext ac = ActionContext.getContext();
         boolean b= MySql.login(getUsername(),getPassword());
-        if (getPassword().equals("")||getUsername().equals("")||getVerfi().equals("")){
+        if (getPassword().equals("")||getUsername().equals("")||getVerfi().equals("")){//验证是否有没输入的文本
             setPassword("");
             String s = "<script language=\"JavaScript\">alert(\"请输入完整的信息！\")</script>";
             ac.getSession().put("cuowu",s);

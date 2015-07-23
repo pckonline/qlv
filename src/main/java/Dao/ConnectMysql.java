@@ -10,6 +10,7 @@ import org.hibernate.service.ServiceRegistry;
 /**
  * Created by online on 15-7-23.
  */
+//hibernate事务的链接和释放
 public class ConnectMysql {
     public static SessionFactory con() throws Exception{
         Configuration conf = new Configuration().configure();

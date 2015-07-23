@@ -89,15 +89,16 @@
 <%--注册界面--%>
 <div class="bordr3">
 </div>
-<%--<%--%>
-    <%--if (request.getSession().getAttribute("cuowu")!=null){--%>
-<%--%>--%>
-<%--<%=request.getSession().getAttribute("cuowu")%>--%>
-<%--<%--%>
-    <%--request.getSession().setAttribute("cuowu",null);--%>
-<%--%>--%>
-<%--<%--%>
-    <%--}--%>
-<%--%>--%>
+<%--登录出错的提醒--%>
+<%
+    if (request.getSession().getAttribute("cuowu")!=null){
+%>
+<%=request.getSession().getAttribute("cuowu")%>
+<%
+    request.getSession().setAttribute("cuowu",null);
+%>
+<%
+    }
+%>
 </body>
 </html>

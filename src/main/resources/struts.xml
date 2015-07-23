@@ -13,6 +13,7 @@
     <constant name="struts.devMode" value="false"/>
     <include file="struts-default.xml"/>
     <package name="applyRoom" extends="struts-default" >
+        <!--登录的拦截action-->
         <action name="Login_*" class="cm.action.LoginAction" method="{1}">
             <result name="success">l/l_first.jsp</result>
             <result name="error">l.jsp</result>

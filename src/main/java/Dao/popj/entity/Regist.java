@@ -6,7 +6,7 @@ import javax.persistence.*;
 /**
  * Created by online on 15-7-23.
  */
-//注册用户时的entity  id为主键，
+//注册用户时的entity  id为主键，这是一个实体
 @Entity
 @Table(name = "login")
 public class Regist {

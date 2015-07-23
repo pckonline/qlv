@@ -6,6 +6,7 @@
 <web-app>
 
     <display-name>Archetype Created Web Application</display-name>
+    <!--网页的拦截-->
     <filter>
         <filter-name>struts2</filter-name>
         <filter-class>
