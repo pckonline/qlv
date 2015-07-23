@@ -22,11 +22,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="qlv" />
+        <module name="text" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="qlv" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
+
