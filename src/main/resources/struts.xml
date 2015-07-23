@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <!DOCTYPE struts PUBLIC
-        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
-        "http://struts.apache.org/dtds/struts-2.0.dtd">
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <!--
     这里如果想配置校验方式   只需要修改第三行的struts 和第五行的dtds/后面的部分
@@ -9,8 +10,9 @@
 -->
 
 <struts>
-    <constant name="struts.devMode" value="false" />
-    <package name="applyRoom" extends="struts-default" namespace="/" >
+    <constant name="struts.devMode" value="false"/>
+    <include file="struts-default.xml"/>
+    <package name="applyRoom" extends="struts-default" >
         <action name="Login_*" class="cm.action.LoginAction" method="{1}">
             <result name="success">index.jsp</result>
         </action>

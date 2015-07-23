@@ -25,6 +25,8 @@
         <module name="qlv" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="qlv" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
-
