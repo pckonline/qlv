@@ -1,0 +1,43 @@
+/* log大小   index 的一些样式 */
+div.menu{
+    position:absolute;
+    left:120px;
+    top:90px;
+}
+a.change1{
+    font-size: 80px;
+    color: #8080C0;
+    text-decoration: none;
+}
+a.change2{
+    font-size: 80px;
+    color: #8080C0;
+    text-decoration: none;
+}
+a.change3{
+    font-size: 80px;
+    color: #8080C0;
+    text-decoration: none;
+}
+a.change1:hover{
+    color: #ff0000;
+}
+a.change2:hover{
+    color: #00ff00;
+}
+a.change3:hover{
+    color: #0000ff;
+}
+ul
+{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    width: 1000px;
+}
+li
+{
+    margin-left: 100px;
+    float:left;
+}

@@ -1,6 +1,7 @@
 package cm.action;
 
 import Dao.VerCode;
+import Dao.select.MySql;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
@@ -44,8 +45,29 @@ public class LoginAction extends ActionSupport {
 
 
 
-    public String login() throws Exception{//判断是否有未输入的文本框
-        return SUCCESS;
+    public String login() throws Exception{
+        VerCode ver =new VerCode();
+        ActionContext ac = ActionContext.getContext();
+        boolean b= MySql.login(getUsername(),getPassword());
+        if (getPassword().equals("")||getUsername().equals("")||getVerfi().equals("")){
+            setPassword("");
+            String s = "<script language=\"JavaScript\">alert(\"请输入完整的信息！\")</script>";
+            ac.getSession().put("cuowu",s);
+            return ERROR;
+        }else if (b==false){//判断用户信息是否正确
+            setPassword("");
+            String s ="<script language=\"JavaScript\">alert(\"用户名或密码错误！\")</script>";
+            ac.getSession().put("cuowu",s);
+            return ERROR;
+        }else if (!getVerfi().equalsIgnoreCase((String)ac.getSession().get("verfi"))){//防止暴力登录，加入验证码功能。不区分大小写
+            String s ="<script language=\"JavaScript\">alert(\"验证码错误！\")</script>";
+            ac.getSession().put("cuowu",s);
+            return ERROR;
+        }
+        else {
+            return SUCCESS;
+        }
+
     }
     public void img() throws IOException {//验证码图片功能
         ActionContext ac = ActionContext.getContext();

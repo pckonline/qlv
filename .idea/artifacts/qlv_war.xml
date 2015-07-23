@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="qlv:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="qlv.war">
-      <element id="artifact" artifact-name="qlv:war exploded" />
-    </root>
-  </artifact>
-</component>
