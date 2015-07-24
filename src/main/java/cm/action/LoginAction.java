@@ -5,6 +5,8 @@ import Dao.select.MySql;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -48,7 +50,9 @@ public class LoginAction extends ActionSupport {
     public String login() throws Exception{
         VerCode ver =new VerCode();
         ActionContext ac = ActionContext.getContext();
-        boolean b= MySql.login(getUsername(),getPassword());
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
+        MySql sq = ctx.getBean("mySql",MySql.class);
+        boolean b= sq.login(getUsername(),getPassword());
         if (getPassword().equals("")||getUsername().equals("")||getVerfi().equals("")){//验证是否有没输入的文本
             setPassword("");
             String s = "<script language=\"JavaScript\">alert(\"请输入完整的信息！\")</script>";
@@ -67,7 +71,6 @@ public class LoginAction extends ActionSupport {
         else {
             return SUCCESS;
         }
-
     }
     public void img() throws IOException {//验证码图片功能
         ActionContext ac = ActionContext.getContext();
@@ -78,5 +81,4 @@ public class LoginAction extends ActionSupport {
         ac.getSession().put("verfi",verfi.getText());
         VerCode.output(bi,resp.getOutputStream());
     }
-
 }

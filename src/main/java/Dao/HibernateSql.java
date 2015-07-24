@@ -10,19 +10,33 @@ import org.hibernate.Transaction;
  */
 //这个类用来写所有sql持久类操作。
 public class HibernateSql {
+    private SessionFactory sf;
 
-//    注册用户
-    public static void valUser() throws Exception {
-        SessionFactory sf = ConnectMysql.con();
+    public void setLg(Regist lg) {
+        this.lg = lg;
+    }
+
+    private Regist lg;
+
+    public SessionFactory getSf() {
+        return sf;
+    }
+
+    public void setSf(SessionFactory sf) {
+        this.sf = sf;
+    }
+
+    //    注册用户
+    public void valUser() throws Exception {
         Session see= sf.openSession();
         Transaction tx = see.beginTransaction();
-        Regist lg = new Regist();
         lg.setUsername("1223");
         lg.setPassword("123456");
         lg.setUname("online");
         see.save(lg);
         tx.commit();
-        ConnectMysql.closeSf(see,sf);
+        see.close();
+        sf.close();
 
     }
 }

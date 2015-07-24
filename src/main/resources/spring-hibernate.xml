@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       ">
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="com.mysql.jdbc.Driver" />
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/qlv" />
+        <property name="user" value="root" />
+        <property name="password" value="p5385676" />
+        <property name="maxPoolSize" value="200" />
+        <property name="minPoolSize" value="2" />
+        <property name="initialPoolSize" value="2" />
+        <property name="maxIdleTime" value="200" />
+    </bean>
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="configLocation"
+                  value="hibernate.cfg.xml">
+        </property>
+        <property name="hibernateProperties" >
+            <value>
+                hibernate.dialect=org.hibernate.dialect.MySQLDialect
+                hibernate.hbm2ddl.auto=update
+            </value>
+        </property>
+    </bean>
+    <bean id="mySql" class="Dao.select.MySql" >
+        <property name="sf" ref="sessionFactory"/>
+    </bean>
+    <bean id="hibernateSql" class="Dao.HibernateSql">
+        <property name="sf" ref="sessionFactory" />
+        <property name="lg" ref="entity" />
+    </bean>
+    <bean id="entity" class="Dao.popj.entity.Regist" />
+
+</beans>

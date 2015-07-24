@@ -1,7 +1,5 @@
 package Dao.select;
 
-import Dao.ConnectMysql;
-import Dao.HibernateSql;
 import Dao.popj.entity.Regist;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -14,8 +12,18 @@ import java.util.List;
  * Created by online on 15-7-23.
  */
 public class MySql {
-    public static boolean login(String username,String password) throws Exception {
-        SessionFactory sf = ConnectMysql.con();
+    private SessionFactory sf;
+
+    public SessionFactory getSf() {
+        return sf;
+    }
+
+    public void setSf(SessionFactory sf) {
+        this.sf = sf;
+    }
+
+    //    验证是否登录成功
+    public boolean login(String username,String password) throws Exception {
         Session see = sf.openSession();
         Transaction tx = see.beginTransaction();
         int count=0;
@@ -33,7 +41,8 @@ public class MySql {
             b=true;
         }
         tx.commit();
-        ConnectMysql.closeSf(see,sf);
+        see.close();
+        sf.close();
         return b;
     }
 
