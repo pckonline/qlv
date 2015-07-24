@@ -36,11 +36,39 @@
             var imgEle=document.getElementById("img");
             imgEle.src ="Login_img?a="+new Date().getTime();
         }
+        function _change1(){
+            var imgEle=document.getElementById("img1");
+            imgEle.src ="Regist_img?a="+new Date().getTime();
+        }
 
 //        实现了一个文本框的变化  如果没有输入  点击里面会清空原value  点击外面会出现原value
         var pl;
-        function d(a){
-            if(a.value=="u&p"|| a.value=="validation"){
+        function i1(a){
+            if(a.value=="u&p"){
+                pl= a.value;
+                a.value="";
+            }
+        }
+        function i2(a){
+            if(a.value=="validation"){
+                pl= a.value;
+                a.value="";
+            }
+        }
+        function i3(a){
+            if(a.value=="用户名"){
+                pl= a.value;
+                a.value="";
+            }
+        }
+        function i4(a){
+            if(a.value=="密码"){
+                pl= a.value;
+                a.value="";
+            }
+        }
+        function i5(a){
+            if(a.value=="昵称"){
                 pl= a.value;
                 a.value="";
             }
@@ -49,6 +77,10 @@
             if(a.value==""){
                 a.value=pl;
             }
+        }
+        function cuowu(a){
+            $(".bordr3").hide(0);
+            alert(a);
         }
     </script>
 </head>
@@ -73,14 +105,14 @@
             <div class="log">
                 <s:form name="log" action="Login_login">
                     <s:actionmessage/><br/>
-                    <s:textfield cssClass="input" id="input1" onfocus="d(this)" onblur="b(this)" name="username" value="u&p" /><br/>
+                    <s:textfield cssClass="input" id="input1" onfocus="i1(this)" onblur="b(this)" name="username" value="u&p" /><br/>
                     <s:password cssClass="input" name="password" /><br/>
-                    <s:textfield cssClass="input" id="input2" onfocus="d(this)" onblur="b(this)"  name="verfi" value="validation"/>
+                    <s:textfield cssClass="input" id="input2" onfocus="i2(this)" onblur="b(this)"  name="verfi" value="validation"/>
                     <s:submit cssClass="sub" value="Login"/>
                 </s:form>
                 <div class="vali">
                     <img style="width:130px;height: 50px" src="Login_img" id="img">
-                    <a class="change" href="javascript:_change()">换一张</a>
+                    <a class="change" href="javascript:_change()">change</a>
                 </div>
             </div>
         <div class="welcome">welcome__づ￣ 3￣)づ</div>
@@ -88,12 +120,27 @@
 
 <%--注册界面--%>
 <div class="bordr3">
+    <div class="log">
+        <s:form name="log" action="Regist_regist">
+            <s:actionmessage/><br/>
+            <s:textfield cssClass="input" id="input3" onfocus="i3(this)" onblur="b(this)" name="username" value="用户名" /><br/>
+            <s:textfield cssClass="input" id="input5"  name="password" onfocus="i4(this)" onblur="b(this)" value="密码" /><br/>
+            <s:textfield cssClass="input" id="input6" onfocus="i5(this)" onblur="b(this)" name="uname" value="昵称" /><br/>
+            <s:textfield cssClass="input" id="input4" onfocus="i2(this)" onblur="b(this)"  name="verfi" value="validation"/>
+            <s:submit cssClass="sub" value="Regist"/>
+        </s:form>
+        <div class="vali">
+            <img style="width:130px;height: 50px" src="Regist_img" id="img1">
+            <a class="change" href="javascript:_change1()">change</a>
+        </div>
+    </div>
 </div>
 <%--登录出错的提醒--%>
 <%
     if (request.getSession().getAttribute("cuowu")!=null){
 %>
 <%=request.getSession().getAttribute("cuowu")%>
+<%--<script type="text/javascript">cuowu("请输入完整的信息！")</script>--%>
 <%
     request.getSession().setAttribute("cuowu",null);
 %>

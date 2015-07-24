@@ -55,16 +55,16 @@ public class LoginAction extends ActionSupport {
         boolean b= sq.login(getUsername(),getPassword());
         if (getPassword().equals("")||getUsername().equals("")||getVerfi().equals("")){//验证是否有没输入的文本
             setPassword("");
-            String s = "<script language=\"JavaScript\">alert(\"请输入完整的信息！\")</script>";
+            String s = "<script type=\"text/javascript\">cuowu(\"请输入完整的信息！\")</script>";
             ac.getSession().put("cuowu",s);
             return ERROR;
         }else if (b==false){//判断用户信息是否正确
             setPassword("");
-            String s ="<script language=\"JavaScript\">alert(\"用户名或密码错误！\")</script>";
+            String s ="<script type=\"text/javascript\">cuowu(\"用户名或密码错误！\")</script>";
             ac.getSession().put("cuowu",s);
             return ERROR;
         }else if (!getVerfi().equalsIgnoreCase((String)ac.getSession().get("verfi"))){//防止暴力登录，加入验证码功能。不区分大小写
-            String s ="<script language=\"JavaScript\">alert(\"验证码错误！\")</script>";
+            String s ="<script type=\"text/javascript\">cuowu(\"验证码错误！\")</script>";
             ac.getSession().put("cuowu",s);
             return ERROR;
         }
