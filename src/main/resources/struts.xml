@@ -18,7 +18,7 @@
             <result name="success">l/l_first.jsp</result>
             <result name="error">l.jsp</result>
         </action>
-        <action name="Regist_*" class="cm.action.RegistAction" method="{1}">
+        <action name="Regi_*" class="cm.action.RegiAction" method="{1}">
             <result name="success">l.jsp</result>
             <result name="error">l.jsp</result>
         </action>

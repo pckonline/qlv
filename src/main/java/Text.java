@@ -1,4 +1,5 @@
-import Dao.HibernateSql;
+import Dao.popj.entity.Regist;
+import cm.action.RegiAction;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -7,8 +8,5 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Text {
     public static void main(String[] args) throws Exception {
-//        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
-//        HibernateSql hs = ctx.getBean("hibernateSql",HibernateSql.class);
-//        hs.valUser();
     }
 }

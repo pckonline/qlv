@@ -11,6 +11,21 @@
     <title></title>
 </head>
 <body>
-fff
+<%
+    if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。
+%>
+成功登录～
+
+<%
+}
+else
+{
+%>
+<%
+    request.getRequestDispatcher("/index.jsp").forward(request,response);//当为空时，返回登录界面。
+%>
+<%
+    }
+%>
 </body>
 </html>

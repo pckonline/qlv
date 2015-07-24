@@ -38,7 +38,7 @@
         }
         function _change1(){
             var imgEle=document.getElementById("img1");
-            imgEle.src ="Regist_img?a="+new Date().getTime();
+            imgEle.src ="Regi_img?a="+new Date().getTime();
         }
 
 //        实现了一个文本框的变化  如果没有输入  点击里面会清空原value  点击外面会出现原value
@@ -68,6 +68,12 @@
             }
         }
         function i5(a){
+            if(a.value=="昵称"){
+                pl= a.value;
+                a.value="";
+            }
+        }
+        function i6(a){
             if(a.value=="昵称"){
                 pl= a.value;
                 a.value="";
@@ -121,16 +127,17 @@
 <%--注册界面--%>
 <div class="bordr3">
     <div class="log">
-        <s:form name="log" action="Regist_regist">
+        <s:form name="log" action="Regi_regi">
             <s:actionmessage/><br/>
             <s:textfield cssClass="input" id="input3" onfocus="i3(this)" onblur="b(this)" name="username" value="用户名" /><br/>
-            <s:textfield cssClass="input" id="input5"  name="password" onfocus="i4(this)" onblur="b(this)" value="密码" /><br/>
+            <s:password cssClass="input" id="input5"  name="password" value="密码" /><br/>
+            <s:password cssClass="input" id="input7" name="passwordtoo" value="确认" /><br/>
             <s:textfield cssClass="input" id="input6" onfocus="i5(this)" onblur="b(this)" name="uname" value="昵称" /><br/>
             <s:textfield cssClass="input" id="input4" onfocus="i2(this)" onblur="b(this)"  name="verfi" value="validation"/>
             <s:submit cssClass="sub" value="Regist"/>
         </s:form>
         <div class="vali">
-            <img style="width:130px;height: 50px" src="Regist_img" id="img1">
+            <img style="width:130px;height: 50px" src="Regi_img" id="img1">
             <a class="change" href="javascript:_change1()">change</a>
         </div>
     </div>
