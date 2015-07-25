@@ -50,5 +50,16 @@
     </div>
     <div class="welcome">welcome__づ￣ 3￣)づ</div>
 </div>
+<%
+    if (request.getSession().getAttribute("cuowu")!=null){
+%>
+<%=request.getSession().getAttribute("cuowu")%>
+<%--<script type="text/javascript">cuowu("请输入完整的信息！")</script>--%>
+<%
+    request.getSession().setAttribute("cuowu",null);
+%>
+<%
+    }
+%>
 </body>
 </html>

@@ -20,6 +20,12 @@
 <%
     if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。
 %>
+<div class="dz">
+    <div class="z">
+        <a class="dz" href="deleteCookie.jsp">注销</a>
+    </div>
+    <%--点击登录时弹出登录页面  通过使用hide 和show的jquery脚本实现--%>
+</div>
 <div>
     <a href="../index.jsp"><img src="../sc/log.gif" alt="爱情旅游聚会" /></a>
 </div>
