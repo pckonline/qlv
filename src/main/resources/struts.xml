@@ -15,12 +15,12 @@
     <package name="applyRoom" extends="struts-default" >
         <!--登录的拦截action-->
         <action name="Login_*" class="cm.action.LoginAction" method="{1}">
-            <result name="success">l/l_first.jsp</result>
-            <result name="error">l.jsp</result>
+            <result name="success">l/l.jsp</result>
+            <result name="error">index.jsp</result>
         </action>
         <action name="Regi_*" class="cm.action.RegiAction" method="{1}">
-            <result name="success">l.jsp</result>
-            <result name="error">l.jsp</result>
+            <result name="success">index.jsp</result>
+            <result name="error">index.jsp</result>
         </action>
     </package>
 </struts>

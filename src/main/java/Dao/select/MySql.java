@@ -2,11 +2,16 @@ package Dao.select;
 
 import Dao.popj.entity.Regist;
 import com.opensymphony.xwork2.ActionContext;
+import org.apache.struts2.ServletActionContext;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.type.StandardBasicTypes;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 
@@ -50,7 +55,12 @@ public class MySql {
         if (count>0){
             b=true;
             ActionContext ac = ActionContext.getContext();
+            Cookie cookie = new Cookie("username",uname);
+            cookie.setMaxAge(30*24*3600);
+            cookie.setPath("/");
             ac.getSession().put("uname",uname);
+            HttpServletResponse resp = ServletActionContext.getResponse();
+            resp.addCookie(cookie);
         }
         tx.commit();
         see.close();

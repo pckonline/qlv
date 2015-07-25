@@ -5,9 +5,9 @@
 <hibernate-configuration>
     <session-factory>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://10.4.26.93:3306/d2b1f8a30e2614485956e7a58af67824b</property>
-        <property name="connection.username">ucXMTAAh8JAsT</property>
-        <property name="connection.password">pfHz7WzDZ5Psg</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/qlv</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">p5385676</property>
         <!--最大最小连接池-->
         <property name="hibernate.c3p0.max_size">20</property>
         <property name="hibernate.c3p0.min_size">1</property>

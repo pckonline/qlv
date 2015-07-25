@@ -74,7 +74,6 @@ public class LoginAction extends ActionSupport {
     }
     public void img() throws IOException {//验证码图片功能
         ActionContext ac = ActionContext.getContext();
-        HttpServletRequest req = ServletActionContext.getRequest();
         HttpServletResponse resp = ServletActionContext.getResponse();
         VerCode verfi = new VerCode();
         BufferedImage bi = verfi.getImage();
