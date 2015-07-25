@@ -123,12 +123,11 @@
 <div class="bordr3">
     <div class="log">
         <s:form name="log" action="Regi_regi">
-            <pre class="title">
-            提示：用户名和密码必须
-                 为6-12的大小写字母,数字组成。
-                 空白处为输入密码和密码确认处。
-            </pre>
-            <s:actionmessage/><br/>
+        <div class="title1">
+            <p style="margin: 0">提示：用户名和密码只能为</p>
+            <p style="margin: 0">6-12位的数字和字母，</p>
+            <p style="margin: 0">无提示处填写密码。</p>
+        </div>
             <s:textfield cssClass="input" id="input3" onfocus="i3(this)" onblur="b(this)" name="username" value="用户名" /><br/>
             <s:password cssClass="input" id="input5"  name="password" value="密码" /><br/>
             <s:password cssClass="input" id="input7" name="passwordtoo" value="确认" /><br/>

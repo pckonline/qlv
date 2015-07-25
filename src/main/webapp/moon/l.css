@@ -73,13 +73,11 @@ a.dz:hover{
 div.log{
     padding-left: 30px;
 }
-pre.title{
-    position:absolute;
-    top: -10px;
-    left: -40px;
-    font-size: 150%;
+div.title1{
+    position: absolute;
+    top: 3px;
+    font-size: 100%;
     color: #bebebe;
-    text-align: center;
 }
 .input{
     outline: none;
