@@ -54,7 +54,6 @@ public class MySql {
         }
         tx.commit();
         see.close();
-        sf.close();
         return b;
     }
     public boolean valiUsername(String username){//验证用户名是否有人注册,有人注册:true
@@ -86,7 +85,6 @@ public class MySql {
         see.save(lg);
         tx.commit();
         see.close();
-        sf.close();
     }
 
 }

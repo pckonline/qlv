@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by online on 15-7-24.
@@ -60,9 +62,19 @@ public class RegiAction extends ActionSupport {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
         MySql sq = ctx.getBean("mySql",MySql.class);
         boolean b = sq.valiUsername(getUsername());
+        String regx = "\\w{6,12}";
+        Pattern p = Pattern.compile(regx);
+        Matcher m1 = p.matcher(getPassword());
+        Matcher m2 = p.matcher(getUsername());
+        boolean b1 = m1.matches();
+        boolean b2 = m2.matches();
         if (getPassword().equals("")||getUsername().equals("")||getVerfi().equals("")||getUname().equals("")||getPasswordtoo().equals("")){//验证是否有没输入的文本
             setUsername("");
             String s = "<script type=\"text/javascript\">cuowu(\"请输入完整的信息！\")</script>";
+            ac.getSession().put("cuowu", s);
+            return ERROR;
+        }else if(b1==false||b2==false){
+            String s ="<script type=\"text/javascript\">cuowu(\"不符合规范！\")</script>";
             ac.getSession().put("cuowu", s);
             return ERROR;
         }else if (b==true){//判断用户名是否有人注册
@@ -74,12 +86,11 @@ public class RegiAction extends ActionSupport {
             String s ="<script type=\"text/javascript\">cuowu(\"密码不匹配！\")</script>";
             ac.getSession().put("cuowu", s);
             return ERROR;
-        }else if(!getVerfi().equalsIgnoreCase((String)ac.getSession().get("verfire"))){//防止暴力登录，加入验证码功能。不区分大小写
+        }else if(!getVerfi().equalsIgnoreCase((String) ac.getSession().get("verfire"))){//防止暴力登录，加入验证码功能。不区分大小写
             String s ="<script type=\"text/javascript\">cuowu(\"验证码错误！\")</script>";
-            ac.getSession().put("cuowu",s);
+            ac.getSession().put("cuowu", s);
             return ERROR;
         }else {
-            System.out.println("1");
             sq.valUser(getUsername(),getPassword(),getUname());
             return SUCCESS;
         }

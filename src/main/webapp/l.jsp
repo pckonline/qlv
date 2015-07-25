@@ -43,14 +43,8 @@
 
 //        实现了一个文本框的变化  如果没有输入  点击里面会清空原value  点击外面会出现原value
         var pl;
-        function i1(a){
-            if(a.value=="u&p"){
-                pl= a.value;
-                a.value="";
-            }
-        }
         function i2(a){
-            if(a.value=="validation"){
+            if(a.value=="验证码"){
                 pl= a.value;
                 a.value="";
             }
@@ -86,6 +80,7 @@
         }
         function cuowu(a){
             $(".bordr3").hide(0);
+            $(".bordr2").hide(0);
             alert(a);
         }
     </script>
@@ -111,9 +106,9 @@
             <div class="log">
                 <s:form name="log" action="Login_login">
                     <s:actionmessage/><br/>
-                    <s:textfield cssClass="input" id="input1" onfocus="i1(this)" onblur="b(this)" name="username" value="u&p" /><br/>
+                    <s:textfield cssClass="input" id="input1" onfocus="i3(this)" onblur="b(this)" name="username" value="用户名" /><br/>
                     <s:password cssClass="input" name="password" /><br/>
-                    <s:textfield cssClass="input" id="input2" onfocus="i2(this)" onblur="b(this)"  name="verfi" value="validation"/>
+                    <s:textfield cssClass="input" id="input2" onfocus="i2(this)" onblur="b(this)"  name="verfi" value="验证码"/>
                     <s:submit cssClass="sub" value="Login"/>
                 </s:form>
                 <div class="vali">
@@ -128,12 +123,17 @@
 <div class="bordr3">
     <div class="log">
         <s:form name="log" action="Regi_regi">
+            <pre class="title">
+            提示：用户名和密码必须
+                 为6-12的大小写字母,数字组成。
+                 空白处为输入密码和密码确认处。
+            </pre>
             <s:actionmessage/><br/>
             <s:textfield cssClass="input" id="input3" onfocus="i3(this)" onblur="b(this)" name="username" value="用户名" /><br/>
             <s:password cssClass="input" id="input5"  name="password" value="密码" /><br/>
             <s:password cssClass="input" id="input7" name="passwordtoo" value="确认" /><br/>
             <s:textfield cssClass="input" id="input6" onfocus="i5(this)" onblur="b(this)" name="uname" value="昵称" /><br/>
-            <s:textfield cssClass="input" id="input4" onfocus="i2(this)" onblur="b(this)"  name="verfi" value="validation"/>
+            <s:textfield cssClass="input" id="input4" onfocus="i2(this)" onblur="b(this)"  name="verfi" value="验证码"/>
             <s:submit cssClass="sub" value="Regist"/>
         </s:form>
         <div class="vali">
