@@ -34,7 +34,7 @@ else
 {
 %>
 <%
-    request.getRequestDispatcher("/index.jsp").forward(request,response);//当为空时，返回登录界面。
+    request.getRequestDispatcher("../login.jsp").forward(request,response);//当为空时，返回登录界面。
 %>
 <%
     }

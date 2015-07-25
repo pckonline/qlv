@@ -56,19 +56,7 @@
                 a.value="";
             }
         }
-        function i4(a){
-            if(a.value=="密码"){
-                pl= a.value;
-                a.value="";
-            }
-        }
         function i5(a){
-            if(a.value=="昵称"){
-                pl= a.value;
-                a.value="";
-            }
-        }
-        function i6(a){
             if(a.value=="昵称"){
                 pl= a.value;
                 a.value="";
@@ -100,7 +88,7 @@
     <div class="menu">
         <ul>
             <div>
-                <li><img src="sc/log.gif" alt="爱情旅游聚会" /></li>
+                <li><a href="index.jsp"><img src="sc/log.gif" alt="爱情旅游聚会" /></a></li>
             </div>
             <div>
                 <li><a class="change1" href="l/l.jsp">情</a></li>
@@ -153,19 +141,23 @@
 </div>
 <%
     Cookie[] cookies = request.getCookies();
-    for (Cookie co :cookies){
+    if (cookies!=null){
 %>
 <%
+
+    for (Cookie co :cookies){
         if (co.getName().equals("username")){
 %>
-<div style="color: #8080C0;font-size: 150%">欢迎您：<%=co.getValue()%></div>
-
 <%
-
             request.getSession().setAttribute("uname",co.getValue());
+%>
+<div style="color: #8080C0;font-size: 150%">欢迎您：<%=request.getSession().getAttribute("uname")%></div>
+<%
         }
     }
 %>
+<%} %>
+
 <%--登录出错的提醒--%>
 <%
     if (request.getSession().getAttribute("cuowu")!=null){

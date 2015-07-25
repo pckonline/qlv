@@ -4,9 +4,9 @@
     <data-source source="LOCAL" name="hibernate.cfg.xml" uuid="74505212-0b7c-4b00-9a88-0c0695193e69">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://10.4.26.93:3306/d2b1f8a30e2614485956e7a58af67824b</jdbc-url>
-      <user-name>ucXMTAAh8JAsT</user-name>
-      <user-password>dfdadfccdfe2dfd0df9ddffddfd0dfeedff0df9fdffadfd9dfcd</user-password>
+      <jdbc-url>jdbc:mysql://localhost:3306/qlv</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfdadf9fdf99df92df9fdf9cdf9ddf9c</user-password>
       <libraries>
         <library>
           <url>file://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.31/mysql-connector-java-5.1.31.jar</url>
