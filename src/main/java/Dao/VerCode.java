@@ -95,7 +95,7 @@ public class VerCode {
     }
 
     // 保存图片到指定的输出流
-    public static void output (BufferedImage image, OutputStream out)
+    public void output (BufferedImage image, OutputStream out)
             throws IOException, IOException {
         ImageIO.write(image, "JPEG", out);
     }

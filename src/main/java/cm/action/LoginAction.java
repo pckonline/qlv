@@ -78,6 +78,6 @@ public class LoginAction extends ActionSupport {
         VerCode verfi = new VerCode();
         BufferedImage bi = verfi.getImage();
         ac.getSession().put("verfi",verfi.getText());
-        VerCode.output(bi,resp.getOutputStream());
+        verfi.output(bi,resp.getOutputStream());
     }
 }

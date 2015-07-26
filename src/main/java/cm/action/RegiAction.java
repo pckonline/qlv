@@ -102,7 +102,7 @@ public class RegiAction extends ActionSupport {
         VerCode verfi = new VerCode();
         BufferedImage bi = verfi.getImage();
         ac.getSession().put("verfire",verfi.getText());
-        VerCode.output(bi,resp.getOutputStream());
+        verfi.output(bi,resp.getOutputStream());
     }
 
     public void setPasswordtoo(String passwordtoo) {
