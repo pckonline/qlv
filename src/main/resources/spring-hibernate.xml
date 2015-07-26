@@ -15,10 +15,11 @@
             </value>
         </property>
     </bean>
-    <bean id="mySql" class="Dao.select.MySql" >
+    <bean id="dandz" class="Dao.select.Dandz" >
         <property name="sf" ref="sessionFactory"/>
         <property name="lg" ref="entity" />
     </bean>
     <bean id="entity" class="Dao.popj.entity.Regist" />
+    <bean id="infor" class="Dao.popj.entity.Infor" />
 
 </beans>

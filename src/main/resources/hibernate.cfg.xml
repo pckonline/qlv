@@ -14,6 +14,7 @@
         <property name="hibernate.c3p0.timeout">5000</property>
         <property name="hbm2ddl.auto">update</property>
         <mapping class="Dao.popj.entity.Regist" />
+        <mapping class="Dao.popj.entity.Infor" />
 
     </session-factory>
 </hibernate-configuration>

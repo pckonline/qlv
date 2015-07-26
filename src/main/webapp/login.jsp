@@ -11,7 +11,7 @@
 <head>
     <title>登录</title>
 
-    <script src="moon/jquery.js"></script>
+    <script src="l/blog/js/jquery.js"></script>
     <script type="text/javascript">
         function _change(){
             var imgEle=document.getElementById("img");

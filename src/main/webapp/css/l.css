@@ -23,7 +23,7 @@ div.bordr3{
     position: absolute;
     background-color: #ececff;
     width: 400px;
-    height: 500px;
+    height: 600px;
     right:100px;
     top:150px;
     word-warp: break-word;
@@ -33,7 +33,7 @@ div.dz{
     position: absolute;
     width: 180px;
     height: 60px;
-    right:50px;
+    right:120px;
     top:20px;
 }
 div.d{
@@ -51,6 +51,24 @@ div.z{
     left:1px;
     top:-1px;
     text-align:center;
+}
+div.zhuxiao{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right:50px;
+    top:20px;
+}
+a.zhuxiao{
+    display:block;
+    font-weight:bold;
+    color: #00ffff;
+    background-color:#2894ff;
+    text-align:center;
+    padding:4px;
+    text-decoration:none;
+    border: 1px solid ;
+    border-radius: 1em;
 }
 a.dz
 {

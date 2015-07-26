@@ -1,5 +1,6 @@
 package Dao.select;
 
+import Dao.popj.entity.Infor;
 import Dao.popj.entity.Regist;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.struts2.ServletActionContext;
@@ -18,10 +19,9 @@ import java.util.List;
 /**
  * Created by online on 15-7-23.
  */
-public class MySql {
+public class Dandz {
     private SessionFactory sf;
     private Regist lg;
-
     public void setLg(Regist lg) {
         this.lg = lg;
     }
@@ -86,15 +86,16 @@ public class MySql {
         see.close();
         return b;
     }
-    public void valUser(String username,String password,String uname) throws Exception {//注册信息写入数据库
+    public void valUser(String username,String password,String uname,String information,String profess,String hobby) throws Exception {//注册信息写入数据库
         Session see= sf.openSession();
         Transaction tx = see.beginTransaction();
+        Infor infor = new Infor(information,profess,hobby);
         lg.setUsername(username);
         lg.setPassword(password);
         lg.setUname(uname);
+        lg.setInfor(infor);
         see.save(lg);
         tx.commit();
         see.close();
     }
-
 }

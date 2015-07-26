@@ -1,7 +1,12 @@
 package Dao.popj.entity;
 
 
+import org.hibernate.annotations.*;
+import org.hibernate.annotations.CascadeType;
+
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * Created by online on 15-7-23.
@@ -10,12 +15,24 @@ import javax.persistence.*;
 @Entity
 @Table(name = "login")
 public class Regist {
-    @Id
+    @Id @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String username;
     private String password;
     private String uname;
+    @OneToOne(targetEntity = Infor.class)
+    @JoinColumn(name = "infor_id",referencedColumnName = "infor_id",unique = true)
+    @Cascade(CascadeType.ALL)
+    private Infor infor;
+
+    public Infor getInfor() {
+        return infor;
+    }
+
+    public void setInfor(Infor infor) {
+        this.infor = infor;
+    }
 
     public int getId() {
         return id;

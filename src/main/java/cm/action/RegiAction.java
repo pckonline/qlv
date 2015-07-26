@@ -1,7 +1,7 @@
 package cm.action;
 
 import Dao.VerCode;
-import Dao.select.MySql;
+import Dao.select.Dandz;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
@@ -24,6 +24,33 @@ public class RegiAction extends ActionSupport {
     private String uname;
     private String verfi;
     private String passwordtoo;
+    private String information;
+    private String profess;
+    private String hobby;
+
+    public String getInformation() {
+        return information;
+    }
+
+    public void setInformation(String information) {
+        this.information = information;
+    }
+
+    public String getProfess() {
+        return profess;
+    }
+
+    public void setProfess(String profess) {
+        this.profess = profess;
+    }
+
+    public String getHobby() {
+        return hobby;
+    }
+
+    public void setHobby(String hobby) {
+        this.hobby = hobby;
+    }
 
     public String getVerfi() {
         return verfi;
@@ -60,7 +87,7 @@ public class RegiAction extends ActionSupport {
     public String regi() throws Exception {
         ActionContext ac = ActionContext.getContext();
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
-        MySql sq = ctx.getBean("mySql",MySql.class);
+        Dandz sq = ctx.getBean("dandz",Dandz.class);
         boolean b = sq.valiUsername(getUsername());
         String regx = "\\w{6,12}";
         Pattern p = Pattern.compile(regx);
@@ -68,7 +95,7 @@ public class RegiAction extends ActionSupport {
         Matcher m2 = p.matcher(getUsername());
         boolean b1 = m1.matches();
         boolean b2 = m2.matches();
-        if (getPassword().equals("")||getUsername().equals("")||getVerfi().equals("")||getUname().equals("")||getPasswordtoo().equals("")){//验证是否有没输入的文本
+        if (getPassword().equals("")||getUsername().equals("")||getVerfi().equals("")||getUname().equals("")||getPasswordtoo().equals("")||getHobby().equals("")||getInformation().equals("")||getProfess().equals("")){//验证是否有没输入的文本
             setUsername("");
             String s = "<script type=\"text/javascript\">cuowu(\"请输入完整的信息！\")</script>";
             ac.getSession().put("cuowu", s);
@@ -91,7 +118,7 @@ public class RegiAction extends ActionSupport {
             ac.getSession().put("cuowu", s);
             return ERROR;
         }else {
-            sq.valUser(getUsername(),getPassword(),getUname());
+            sq.valUser(getUsername(),getPassword(),getUname(),getInformation(),getProfess(),getHobby());
             return SUCCESS;
         }
     }
@@ -102,7 +129,7 @@ public class RegiAction extends ActionSupport {
         VerCode verfi = new VerCode();
         BufferedImage bi = verfi.getImage();
         ac.getSession().put("verfire",verfi.getText());
-        verfi.output(bi,resp.getOutputStream());
+        verfi.output(bi, resp.getOutputStream());
     }
 
     public void setPasswordtoo(String passwordtoo) {

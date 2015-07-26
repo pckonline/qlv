@@ -23,7 +23,7 @@
     response.addCookie(cookie);
 %>
 <script type="text/javascript">
-    window.location.href="../index.jsp"
+    window.location.href="index.jsp"
 </script>
 <%
 }
@@ -31,7 +31,7 @@ else
 {
 %>
 <%
-    request.getRequestDispatcher("../login.jsp").forward(request,response);//当为空时，返回登录界面。
+    request.getRequestDispatcher("login.jsp").forward(request,response);//当为空时，返回登录界面。
 %>
 <%
     }
