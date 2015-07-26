@@ -85,6 +85,7 @@ public class RegiAction extends ActionSupport {
         return uname;
     }
     public String regi() throws Exception {
+        System.out.println("1");
         ActionContext ac = ActionContext.getContext();
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
         Dandz sq = ctx.getBean("dandz",Dandz.class);

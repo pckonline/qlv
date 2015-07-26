@@ -1,3 +1,4 @@
+<%@ page import="java.net.URLDecoder" %>
 <%--
   Created by IntelliJ IDEA.
   User: online
@@ -100,7 +101,8 @@
         if (co.getName().equals("username")){
 %>
 <%
-            request.getSession().setAttribute("uname",co.getValue());
+    String str = URLDecoder.decode(co.getValue(), "utf-8");
+    request.getSession().setAttribute("uname",str);
 %>
 <div style="color: #8080C0;font-size: 150%">欢迎您：<%=request.getSession().getAttribute("uname")%></div>
 <%

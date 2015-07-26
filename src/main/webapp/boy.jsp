@@ -1,3 +1,4 @@
+<%@ page import="Dao.cookie.Coolie" %>
 <%--
   Created by IntelliJ IDEA.
   User: online
@@ -70,7 +71,8 @@
             <ul>
                 <img src="images/boy.jpg">
                 <p><%=request.getSession().getAttribute("uname")%></p>
-                <p>职业：3DST技术网站长</p>
+                <p>职业：<%=Coolie.selectCookie(request,"profess")%></p>
+                <p>爱好：<%=Coolie.selectCookie(request,"hobby")%></p>
             </ul>
         </div>
         <div class="about_he">

@@ -1,3 +1,4 @@
+<%@ page import="Dao.cookie.Coolie" %>
 <%--
   Created by IntelliJ IDEA.
   User: online
@@ -11,6 +12,6 @@
     <title></title>
 </head>
 <body>
-
+<%=Coolie.selectCookie(request,"information")%>
 </body>
 </html>

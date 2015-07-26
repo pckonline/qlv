@@ -1,3 +1,4 @@
+<%@ page import="Dao.cookie.Coolie" %>
 <%--
   Created by IntelliJ IDEA.
   User: online
@@ -16,11 +17,12 @@
     if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。
 %>
 <%
-    Cookie cookie = new Cookie("username",null);
-    cookie.setMaxAge(0);
-    cookie.setPath("/");
-    request.getSession().setAttribute("uname",null);
-    response.addCookie(cookie);
+    Coolie coolie = new Coolie();
+    coolie.deleteCookie(response,"username");
+    coolie.deleteCookie(response,"information");
+    coolie.deleteCookie(response,"profess");
+    coolie.deleteCookie(response,"hobby");
+    request.getSession().setAttribute("uname", null);
 %>
 <script type="text/javascript">
     window.location.href="index.jsp"
