@@ -23,7 +23,7 @@ div.bordr3{
     position: absolute;
     background-color: #ececff;
     width: 400px;
-    height: 600px;
+    height: 610px;
     right:100px;
     top:150px;
     word-warp: break-word;
@@ -103,6 +103,16 @@ div.title1{
     height: 40px;
     font-size: 170%;
     color: #bebebe;
+}
+.information1{
+    width: 1000px; margin: 45px auto 30px; background: rgba(248,227,215,.7); height: 257px; overflow: hidden
+}
+.information{
+    font-size: 200%;
+    color: #ececff;;
+    resize: none;
+    width: 1000px;
+    height: 123px;
 }
 .sub{
     position: relative;

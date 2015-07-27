@@ -27,6 +27,15 @@ public class RegiAction extends ActionSupport {
     private String information;
     private String profess;
     private String hobby;
+    private String sex;
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
 
     public String getInformation() {
         return information;
@@ -96,7 +105,7 @@ public class RegiAction extends ActionSupport {
         Matcher m2 = p.matcher(getUsername());
         boolean b1 = m1.matches();
         boolean b2 = m2.matches();
-        if (getPassword().equals("")||getUsername().equals("")||getVerfi().equals("")||getUname().equals("")||getPasswordtoo().equals("")||getHobby().equals("")||getInformation().equals("")||getProfess().equals("")){//验证是否有没输入的文本
+        if (getSex().equals("")||getPassword().equals("")||getUsername().equals("")||getVerfi().equals("")||getUname().equals("")||getPasswordtoo().equals("")||getHobby().equals("")||getInformation().equals("")||getProfess().equals("")){//验证是否有没输入的文本
             setUsername("");
             String s = "<script type=\"text/javascript\">cuowu(\"请输入完整的信息！\")</script>";
             ac.getSession().put("cuowu", s);
@@ -119,7 +128,7 @@ public class RegiAction extends ActionSupport {
             ac.getSession().put("cuowu", s);
             return ERROR;
         }else {
-            sq.valUser(getUsername(),getPassword(),getUname(),getInformation(),getProfess(),getHobby());
+            sq.valUser(getSex(),getUsername(),getPassword(),getUname(),getInformation(),getProfess(),getHobby());
             return SUCCESS;
         }
     }

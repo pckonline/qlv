@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="hibernate.cfg.xml" uuid="74505212-0b7c-4b00-9a88-0c0695193e69">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1:3306/qlv?useUnicode=true&amp;characterEncoding=utf-8</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/qlv?useUnicode=true&amp;characterEncoding=utf-8</jdbc-url>
       <user-name>root</user-name>
       <user-password>dfdadf9fdf99df92df9fdf9cdf9ddf9c</user-password>
       <libraries>

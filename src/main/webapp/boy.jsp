@@ -30,7 +30,7 @@
 <div id="nav">
     <ul>
         <li><a href="/index.jsp">首页</a></li>
-        <li><a href="#">关于我</a></li>
+        <li><a href="aboutme.jsp">关于我</a></li>
         <li><a href="#">慢生活</a></li>
         <li><a href="#">留言板</a></li>
     </ul>
@@ -40,7 +40,7 @@
 <div class="banner">
     <ul class="boy_girl">
         <li class="girlimg"><a href="/l"><span>关于她</span></a></li>
-        <li class="boyimg"><a href="/"><span>关于我</span></a></li>
+        <li class="boyimg"><a href="aboutme.jsp"><span>关于我</span></a></li>
     </ul>
     <ul class="texts">
         <p><img src="images/t-1.png" alt="人生，是一场盛大的遇见"></p>
@@ -70,7 +70,7 @@
             <h2>关于我</h2>
             <ul>
                 <img src="images/boy.jpg">
-                <p><%=request.getSession().getAttribute("uname")%></p>
+                <p>网名：<%=Coolie.selectCookie(request,"username")%></p>
                 <p>职业：<%=Coolie.selectCookie(request,"profess")%></p>
                 <p>爱好：<%=Coolie.selectCookie(request,"hobby")%></p>
             </ul>

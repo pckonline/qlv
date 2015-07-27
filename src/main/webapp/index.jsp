@@ -1,4 +1,5 @@
 <%@ page import="java.net.URLDecoder" %>
+<%@ page import="Dao.cookie.Coolie" %>
 <%--
   Created by IntelliJ IDEA.
   User: online
@@ -39,8 +40,12 @@
             <div>
                 <li><a href="index.jsp"><img src="images/log.gif" alt="爱情旅游聚会" /></a></li>
             </div>
-            <div>
-                <li><a class="change1" href="boy.jsp">情</a></li>
+            <div><%if (Coolie.selectCookie(request,"sex").equals("男")){
+                %>
+                <li><a class="change1" href="boy.jsp">情</a></li><%}else{
+                    %>
+                    <li><a class="change1" href="girl.jsp">情</a></li>
+               <% } %>
                 <li><a class="change2">旅</a></li>
                 <li><a class="change3">会</a></li>
             </div>
@@ -82,6 +87,7 @@
             <s:textfield cssClass="input" id="input7" onfocus="i3(this)" onblur="b(this)" name="information" value="自我介绍" /><br/>
             <s:textfield cssClass="input" id="input8" onfocus="i4(this)" onblur="b(this)" name="profess" value="职业" /><br/>
             <s:textfield cssClass="input" id="input9" onfocus="i5(this)" onblur="b(this)" name="hobby" value="爱好" /><br/>
+            <s:radio name="sex" list="{'男','女'}" ></s:radio>
             <s:textfield cssClass="input" id="input10" onfocus="i6(this)" onblur="b(this)"  name="verfi" value="验证码"/>
             <s:submit cssClass="sub" value="Regist"/>
         </s:form>

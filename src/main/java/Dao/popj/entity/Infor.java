@@ -15,14 +15,24 @@ public class Infor {
     private String information;
     private String profess;
     private String hobby;
+    private String sex;
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
 
     public Infor() {
     }
 
-    public Infor(String information, String profess, String hobby) {
+    public Infor(String information, String profess, String hobby,String sex) {
         this.information = information;
         this.profess = profess;
         this.hobby = hobby;
+        this.sex = sex;
     }
 
     public int getInforId() {

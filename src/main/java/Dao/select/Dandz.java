@@ -59,6 +59,7 @@ public class Dandz {
         String information=null;
         String profess=null;
         String hobby=null;
+        String sex=null;
         String sql = "select * from login l,infor i where l.infor_id=i.infor_id and username=?1 and password=?2";
         List list = see.createSQLQuery(sql)
                 .addEntity(Regist.class)
@@ -76,7 +77,7 @@ public class Dandz {
             information=infor1.getInformation();
             profess = infor1.getProfess();
             hobby = infor1.getHobby();
-
+            sex = infor1.getSex();
         }
         if (count>0){
             b=true;
@@ -86,6 +87,7 @@ public class Dandz {
             coolie.addCookie(resp,"username",uname);
             coolie.addCookie(resp,"profess",profess);
             coolie.addCookie(resp,"hobby",hobby);
+            coolie.addCookie(resp,"sex",sex);
             ac.getSession().put("uname",uname);
 
         }
@@ -113,12 +115,13 @@ public class Dandz {
         see.close();
         return b;
     }
-    public void valUser(String username,String password,String uname,String information,String profess,String hobby) throws Exception {//注册信息写入数据库
+    public void valUser(String sex,String username,String password,String uname,String information,String profess,String hobby) throws Exception {//注册信息写入数据库
         Session see= sf.openSession();
         Transaction tx = see.beginTransaction();
         infor.setHobby(hobby);
         infor.setProfess(profess);
         infor.setInformation(information);
+        infor.setSex(sex);
         System.out.println(information);
         lg.setUsername(username);
         lg.setPassword(password);
@@ -128,4 +131,5 @@ public class Dandz {
         tx.commit();
         see.close();
     }
+
 }
