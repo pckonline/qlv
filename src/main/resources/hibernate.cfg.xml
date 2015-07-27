@@ -16,5 +16,7 @@
         <mapping class="Dao.popj.entity.Regist" />
         <mapping class="Dao.popj.entity.Infor" />
         <mapping class="Dao.popj.entity.Person" />
+        <mapping class="Dao.popj.entity.Love" />
+
     </session-factory>
 </hibernate-configuration>

@@ -1,4 +1,5 @@
-<!doctype html>
+<%@ page import="Dao.cookie.Coolie" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="gb2312">
@@ -11,17 +12,19 @@
     <![endif]-->
 </head>
 <body>
+<%--<%--%>
+<%--if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。--%>
+<%--%>--%>
 <header>
-    <h1><a href="/">夏の花世界</a></h1>
+    <h1><a href="index.jsp">夏の花世界</a></h1>
     <p>冥冥中一种花香扑鼻,令人陶醉于心的静谧,不禁回忆,我们相遇的那一季正是盛夏之花烂漫时...</p>
 </header>
 <!--nav begin-->
 <div id="nav">
     <ul>
-        <li><a href="/">首页</a></li>
-        <li><a href="#">关于我</a></li>
+        <li><a href="index.jsp">首页</a></li>
+        <li><a href="aboutme.jsp">关于我</a></li>
         <li><a href="#">慢生活</a></li>
-        <li><a href="#">模板分享</a></li>
         <li><a href="#">留言板</a></li>
     </ul>
 </div>
@@ -30,7 +33,7 @@
 <div class="banner">
     <ul class="boy_girl">
         <li class="boyimg"><a href="/"><span>关于他</span></a></li>
-        <li class="girlimg"><a href="/"><span>关于我</span></a></li>
+        <li class="girlimg"><a href="aboutme.jsp"><span>关于我</span></a></li>
     </ul>
     <ul class="texts">
         <p><img src="images/t-1.png" alt="人生，是一场盛大的遇见"></p>
@@ -45,14 +48,8 @@
         <li class="n1"><a href="/">相遇</a>
             <div class="dateview">2011-06-27</div>
         </li>
-        <li class="n2"><a href="/">相识</a>
-            <div class="dateview">2011-12-19</div>
-        </li>
         <li class="n3"><a href="/">相知</a>
             <div class="dateview">2012-10-01</div>
-        </li>
-        <li class="n4"><a href="/">相恋</a>
-            <div class="dateview">2013-02-14</div>
         </li>
         <li class="n5"><a href="/">相爱</a>
             <div class="dateview">2014-10-05</div>
@@ -66,9 +63,9 @@
             <h2>关于我</h2>
             <ul>
                 <img src="images/girl.jpg">
-                <p>网名：DanceSmile | 即步非烟</p>
-                <p>主页：www.yangqq.com</p>
-                <p>职业：网站设计、网站制作</p>
+                <p>网名：<%=Coolie.selectCookie(request, "username")%></p>
+                <p>职业：<%=Coolie.selectCookie(request,"profess")%></p>
+                <p>爱好：<%=Coolie.selectCookie(request,"hobby")%></p>
             </ul>
         </div>
         <div class="about_he">
@@ -136,5 +133,16 @@
 <footer>
     <p>Design by DanceSmile</p>
 </footer>
+<%--<%--%>
+<%--}--%>
+<%--else--%>
+<%--{--%>
+<%--%>--%>
+<%--<%--%>
+<%--request.getRequestDispatcher("/login.jsp").forward(request,response);//当为空时，返回登录界面。--%>
+<%--%>--%>
+<%--<%--%>
+<%--}--%>
+<%--%>--%>
 </body>
 </html>

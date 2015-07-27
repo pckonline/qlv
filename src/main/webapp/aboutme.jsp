@@ -34,7 +34,7 @@
             String[] strs =nokong.split("，");
             for (int i = 0;i<strs.length;i++){
                 %>
-        <p><%=strs[i]%></p>
+        <p style="color: #9999cc"><%=strs[i]%></p>
         <%
             }
         %>
