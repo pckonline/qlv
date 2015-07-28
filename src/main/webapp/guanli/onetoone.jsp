@@ -16,8 +16,8 @@
 if (request.getSession().getAttribute("uname").equals("小白")){//当获得的session不为空时，发送欢迎语句。
 %>
 <s:form action="Infor_onetoone" name="onetoone">
-    <s:textfield name="boy_id" />
-    <s:textfield name="girl_id" />
+    <s:textfield name="boy_username" />
+    <s:textfield name="girl_username" />
     <s:submit />
 </s:form>
 <%

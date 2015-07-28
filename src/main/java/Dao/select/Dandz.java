@@ -60,6 +60,7 @@ public class Dandz {
         String profess=null;
         String hobby=null;
         String sex=null;
+        String zhanghao=null;
         String sql = "select * from login l,infor i where l.infor_id=i.infor_id and username=?1 and password=?2";
         List list = see.createSQLQuery(sql)
                 .addEntity(Regist.class)
@@ -78,6 +79,7 @@ public class Dandz {
             profess = infor1.getProfess();
             hobby = infor1.getHobby();
             sex = infor1.getSex();
+            zhanghao=regist.getUsername();
         }
         if (count>0){
             b=true;
@@ -88,6 +90,7 @@ public class Dandz {
             coolie.addCookie(resp,"profess",profess);
             coolie.addCookie(resp,"hobby",hobby);
             coolie.addCookie(resp,"sex",sex);
+            coolie.addCookie(resp,"zhanghao",zhanghao);
             ac.getSession().put("uname",uname);
 
         }
