@@ -40,7 +40,7 @@
             <div>
                 <li><a href="index.jsp"><img src="images/log.gif" alt="爱情旅游聚会" /></a></li>
             </div>
-            <div><%if (Coolie.selectCookie(request,"sex").equals("男")){
+            <div><%if (Coolie.selectCookie(request,"sex")!=null&&Coolie.selectCookie(request,"sex").equals("男")){
                 %>
                 <li><a class="change1" href="boy.jsp">情</a></li><%}else{
                     %>

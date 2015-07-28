@@ -19,7 +19,6 @@
 <%
     Coolie coolie = new Coolie();
     coolie.deleteCookie(response,"username");
-    coolie.deleteCookie(response,"information");
     coolie.deleteCookie(response,"profess");
     coolie.deleteCookie(response,"hobby");
     coolie.deleteCookie(response,"zhanghao");

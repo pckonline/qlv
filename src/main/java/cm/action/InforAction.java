@@ -67,6 +67,8 @@ public class InforAction extends ActionSupport {
         CompletInfor ci = ctx.getBean("complete", CompletInfor.class);
         HttpServletRequest request = ServletActionContext.getRequest();
         ci.insetql(request,ci.selectid(request,getBoy_username()),ci.selectid(request,getGirl_username()));
+        setBoy_username("");
+        setGirl_username("");
         return "onetoone";
     }
 }

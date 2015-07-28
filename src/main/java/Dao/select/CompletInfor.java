@@ -63,7 +63,9 @@ public class CompletInfor {
         int id = 0;
         Session see = sf.openSession();
         Transaction tx = see.beginTransaction();
+        System.out.println("2");
         String sql = "select * from login where username=?1";
+        System.out.println("3");
         List list = see.createSQLQuery(sql)
                 .addEntity(Regist.class)
                 .setString("1", username)
@@ -78,6 +80,7 @@ public class CompletInfor {
         see.close();
         return id;
     }
+    //传入Session,因为在查询中需要用到查询
     public void insetql(HttpServletRequest request, int boy_id,int girl_id){
         Session see = sf.openSession();
         Transaction tx = see.beginTransaction();

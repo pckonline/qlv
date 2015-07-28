@@ -1,4 +1,7 @@
 <%@ page import="Dao.cookie.Coolie" %>
+<%@ page import="Dao.select.Dandz" %>
+<%@ page import="org.springframework.context.ApplicationContext" %>
+<%@ page import="org.springframework.context.support.ClassPathXmlApplicationContext" %>
 <%--
   Created by IntelliJ IDEA.
   User: online
@@ -29,7 +32,9 @@
 <div class="information1">
     <ul class="texts">
         <%
-            String infor=Coolie.selectCookie(request,"information");
+            ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
+            Dandz sq = ctx.getBean("dandz",Dandz.class);
+            String infor=sq.information(Coolie.selectCookie(request,"zhanghao"));
             String nokong=infor.replaceAll(" ","");
             String[] strs =nokong.split("，");
             for (int i = 0;i<strs.length;i++){

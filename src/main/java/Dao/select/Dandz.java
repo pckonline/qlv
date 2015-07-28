@@ -10,14 +10,10 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.type.StandardBasicTypes;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.net.URLDecoder;
-import java.util.HashMap;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -56,7 +52,6 @@ public class Dandz {
         int count=0;
         boolean b =false;
         String uname=null;
-        String information=null;
         String profess=null;
         String hobby=null;
         String sex=null;
@@ -75,7 +70,6 @@ public class Dandz {
             Regist regist = (Regist) objects[0];
             Infor infor1 = (Infor) objects[1];
             uname=regist.getUname();
-            information=infor1.getInformation();
             profess = infor1.getProfess();
             hobby = infor1.getHobby();
             sex = infor1.getSex();
@@ -85,18 +79,39 @@ public class Dandz {
             b=true;
             ActionContext ac = ActionContext.getContext();
             HttpServletResponse resp = ServletActionContext.getResponse();
-            coolie.addCookie(resp,"information",information);
             coolie.addCookie(resp,"username",uname);
             coolie.addCookie(resp,"profess",profess);
             coolie.addCookie(resp,"hobby",hobby);
             coolie.addCookie(resp,"sex",sex);
             coolie.addCookie(resp,"zhanghao",zhanghao);
             ac.getSession().put("uname",uname);
-
         }
         tx.commit();
         see.close();
         return b;
+    }
+    //查自己的信息
+    public String information(String username) throws UnsupportedEncodingException {
+        Session see = sf.openSession();
+        Transaction tx = see.beginTransaction();
+        String information=null;
+        CompletInfor com=new CompletInfor();
+        HttpServletRequest request=ServletActionContext.getRequest();
+        String sql="select * from login l, infor i where l.infor_id=i.infor_id and username=?1";
+        List list=see.createSQLQuery(sql)
+                .addEntity(Regist.class)
+                .addEntity(Infor.class)
+                .setString("1", username)
+                .list();
+        for(Object ele : list){
+            Object[] objects = (Object[]) ele;
+            Infor infor2 = (Infor) objects[1];
+            information=infor2.getInformation();
+            System.out.println(information);
+        }
+        tx.commit();
+        see.close();
+        return information;
     }
     public boolean valiUsername(String username){//验证用户名是否有人注册,有人注册:true
         boolean b=false;
