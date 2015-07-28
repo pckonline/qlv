@@ -1,6 +1,7 @@
 package cm.action;
 
 import Dao.VerCode;
+import Dao.cookie.Coolie;
 import Dao.select.Dandz;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -8,6 +9,7 @@ import org.apache.struts2.ServletActionContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -49,9 +51,11 @@ public class LoginAction extends ActionSupport {
     public String login() throws Exception{
         VerCode ver =new VerCode();
         ActionContext ac = ActionContext.getContext();
+        HttpServletRequest req = ServletActionContext.getRequest();
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
         Dandz sq = ctx.getBean("dandz",Dandz.class);
         boolean b= sq.login(getUsername(),getPassword());
+        System.out.println(Coolie.selectCookie(req,"sex"));
         if (getPassword().equals("")||getUsername().equals("")||getVerfi().equals("")){//验证是否有没输入的文本
             setPassword("");
             String s = "<script type=\"text/javascript\">cuowu(\"请输入完整的信息！\")</script>";
@@ -68,6 +72,7 @@ public class LoginAction extends ActionSupport {
             return ERROR;
         }
         else {
+            ac.getSession().put("count","one");
             return SUCCESS;
         }
     }

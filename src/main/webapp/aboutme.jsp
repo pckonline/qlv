@@ -26,16 +26,13 @@
     </s:form>
 </div>
 
-
-
-
 <div class="information1">
     <ul class="texts">
         <%
             ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
             Dandz sq = ctx.getBean("dandz",Dandz.class);
             String infor=sq.information(Coolie.selectCookie(request,"zhanghao"));
-            String nokong=infor.replaceAll(" ","");
+            String nokong=infor.replaceAll(" ", "");
             String[] strs =nokong.split("，");
             for (int i = 0;i<strs.length;i++){
                 %>
@@ -44,6 +41,14 @@
             }
         %>
     </ul>
+</div>
+<div class="d">
+    <%if (Coolie.selectCookie(request,"sex")!=null&&Coolie.selectCookie(request,"sex").equals("男")){
+    %>
+    <a class="dz" href="boy.jsp">返回</a><%}else{
+%>
+    <a class="dz" href="girl.jsp">返回</a>
+    <% } %>
 </div>
 
 </body>

@@ -1,4 +1,7 @@
 <%@ page import="Dao.cookie.Coolie" %>
+<%@ page import="Dao.select.Dandz" %>
+<%@ page import="org.springframework.context.support.ClassPathXmlApplicationContext" %>
+<%@ page import="org.springframework.context.ApplicationContext" %>
 <%--
   Created by IntelliJ IDEA.
   User: online
@@ -14,9 +17,10 @@
     <meta name="Keywords" content="博客模板,情侣博客模板" >
     <meta name="Description" content="情侣博客模板" >
     <link href="css/index.css" rel="stylesheet">
-    <!--[if lt IE 9]>
+
     <script src="js/modernizr.js"></script>
-    <![endif]-->
+
+
 </head>
 <body>
 <%--<%--%>
@@ -26,6 +30,18 @@
     <h1><a href="">青涩の初夏</a></h1>
     <p>趁我们都还年轻,多欣赏下沿途的风景，不要错过了流年里温暖的人和物....</p>
 </header>
+<%
+    if (request.getSession().getAttribute("count")!=null&&request.getSession().getAttribute("count").equals("one")){
+%>
+<script type="text/javascript">
+    setTimeout(function(){    window.location.reload();}, 1000);
+</script>
+<%
+    request.getSession().setAttribute("count","two");
+%>
+<%
+    }
+%>
 <!--nav begin-->
 <div id="nav">
     <ul>
@@ -39,7 +55,7 @@
 <div class="blank"></div>
 <div class="banner">
     <ul class="boy_girl">
-        <li class="girlimg"><a href="/l"><span>关于她</span></a></li>
+        <li class="girlimg"><a href="/aboutanother.jsp"><span>关于她</span></a></li>
         <li class="boyimg"><a href="aboutme.jsp"><span>关于我</span></a></li>
     </ul>
     <ul class="texts">
@@ -76,10 +92,18 @@
             </ul>
         </div>
         <div class="about_he">
-            <h2>关于她</h2><ul>
-            <img src="images/girl.jpg">
-            <p>网名：DanceSmile | 即步非烟</p>
-            <p>职业：网站设计、网站制作</p>
+            <h2>关于她</h2>
+            <ul>
+            <a href="boy.jsp"><img src="images/girl.jpg"></a>
+
+            <%
+                ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
+                Dandz sq = ctx.getBean("dandz",Dandz.class);
+                sq.addAnother(request,Coolie.selectCookie(request,"zhanghao"));
+            %>
+            <p>网名：<%=Coolie.selectCookie(request,"anotherUname")%></p>
+            <p>职业：<%=Coolie.selectCookie(request,"anotherProfess")%></p>
+            <p>爱好：<%=Coolie.selectCookie(request,"anotherHobby")%></p>
         </ul>
 
         </div>

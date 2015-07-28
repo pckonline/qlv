@@ -1,4 +1,7 @@
 <%@ page import="Dao.cookie.Coolie" %>
+<%@ page import="Dao.select.Dandz" %>
+<%@ page import="org.springframework.context.support.ClassPathXmlApplicationContext" %>
+<%@ page import="org.springframework.context.ApplicationContext" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -7,10 +10,11 @@
     <meta name="Keywords" content="博客模板,情侣博客模板" >
     <meta name="Description" content="情侣博客模板" >
     <link href="css/index.css" rel="stylesheet">
-    <!--[if lt IE 9]>
     <script src="js/modernizr.js"></script>
-    <![endif]-->
+
+
 </head>
+
 <body>
 <%--<%--%>
 <%--if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。--%>
@@ -19,6 +23,19 @@
     <h1><a href="index.jsp">夏の花世界</a></h1>
     <p>冥冥中一种花香扑鼻,令人陶醉于心的静谧,不禁回忆,我们相遇的那一季正是盛夏之花烂漫时...</p>
 </header>
+<%
+    if (request.getSession().getAttribute("count")!=null&&request.getSession().getAttribute("count").equals("one")){
+        %>
+<script type="text/javascript">
+    setTimeout(function(){    window.location.reload();}, 100);
+</script>
+<%
+    request.getSession().setAttribute("count","two");
+%>
+<%
+    }
+%>
+　
 <!--nav begin-->
 <div id="nav">
     <ul>
@@ -32,7 +49,7 @@
 <div class="blank"></div>
 <div class="banner">
     <ul class="boy_girl">
-        <li class="boyimg"><a href="/"><span>关于他</span></a></li>
+        <li class="boyimg"><a href="/aboutanother.jsp"><span>关于他</span></a></li>
         <li class="girlimg"><a href="aboutme.jsp"><span>关于我</span></a></li>
     </ul>
     <ul class="texts">
@@ -71,10 +88,15 @@
         <div class="about_he">
             <h2>关于他</h2>
             <ul>
-                <img src="images/boy.jpg">
-                <p>网名：牙齿晒太阳</p>
-                <p>主页：www.3dst.com</p>
-                <p>职业：3DST技术网站长</p>
+                <a href="girl.jsp"><img src="images/boy.jpg"></a>
+                <%
+                    ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
+                    Dandz sq = ctx.getBean("dandz",Dandz.class);
+                    sq.addAnother(request,Coolie.selectCookie(request,"zhanghao"));
+                %>
+                <p>网名：<%=Coolie.selectCookie(request,"anotherUname")%></p>
+                <p>职业：<%=Coolie.selectCookie(request,"anotherProfess")%></p>
+                <p>爱好：<%=Coolie.selectCookie(request,"anotherHobby")%></p>
             </ul>
         </div>
         <div class="newslist">

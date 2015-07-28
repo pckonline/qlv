@@ -21,7 +21,11 @@
     coolie.deleteCookie(response,"username");
     coolie.deleteCookie(response,"profess");
     coolie.deleteCookie(response,"hobby");
+    coolie.deleteCookie(response,"sex");
     coolie.deleteCookie(response,"zhanghao");
+    coolie.deleteCookie(response,"anotherUname");
+    coolie.deleteCookie(response,"anotherProfess");
+    coolie.deleteCookie(response,"anotherHobby");
     request.getSession().setAttribute("uname", null);
 %>
 <script type="text/javascript">

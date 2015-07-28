@@ -1,4 +1,7 @@
 <%@ page import="Dao.cookie.Coolie" %>
+<%@ page import="org.springframework.context.support.ClassPathXmlApplicationContext" %>
+<%@ page import="Dao.select.Dandz" %>
+<%@ page import="org.springframework.context.ApplicationContext" %>
 <%--
   Created by IntelliJ IDEA.
   User: online
@@ -10,6 +13,9 @@
 <html>
 <head>
     <title>另一半</title>
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/l.css" rel="stylesheet">
+    <script src="js/modernizr.js"></script>
 </head>
 <body>
 <%--<%--%>
@@ -22,7 +28,9 @@
 <div class="information1">
     <ul class="texts">
         <%
-            String infor= Coolie.selectCookie(request, "informationanother");
+            ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
+            Dandz sq = ctx.getBean("dandz",Dandz.class);
+            String infor=sq.informationAnother(request, Coolie.selectCookie(request, "zhanghao"));
             String nokong=infor.replaceAll(" ","");
             String[] strs =nokong.split("，");
             for (int i = 0;i<strs.length;i++){
@@ -32,6 +40,14 @@
             }
         %>
     </ul>
+</div>
+<div class="d">
+    <%if (Coolie.selectCookie(request,"sex")!=null&&Coolie.selectCookie(request,"sex").equals("男")){
+    %>
+    <a class="dz" href="boy.jsp">返回</a><%}else{
+%>
+    <a class="dz" href="girl.jsp">返回</a>
+    <% } %>
 </div>
 
 <%--<%--%>
