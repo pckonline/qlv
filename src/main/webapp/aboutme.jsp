@@ -19,6 +19,9 @@
     <script src="js/modernizr.js"></script>
 </head>
 <body>
+<%
+    if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。
+%>
 <div class="information1">
     <s:form action="Infor_me" name="me">
         <s:textarea name="infor" cssClass="information" label="自我描述吧～以中文逗号为分割，且只能显示六项" labelposition="top"/>
@@ -50,6 +53,16 @@
     <a class="dz" href="girl.jsp">返回</a>
     <% } %>
 </div>
-
+<%
+    }
+    else
+    {
+%>
+<%
+    request.getRequestDispatcher("/login.jsp").forward(request,response);//当为空时，返回登录界面。
+%>
+<%
+    }
+%>
 </body>
 </html>

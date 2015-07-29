@@ -18,7 +18,6 @@
     <link rel="stylesheet" type="text/css" href="css/test.css">
     <script src="js/jquery.js"></script>
     <script type="text/javascript" src="js/myJs.js">
-
     </script>
 </head>
 <body style="background-color: #caffff">
@@ -33,7 +32,7 @@
 </div>
 <div class="zhuxiao">
     <a class="zhuxiao" href="deleteCookie.jsp">注销</a>
-    </div>
+</div>
 
 <div>
     <div class="menu">
@@ -42,11 +41,11 @@
                 <li><a href="index.jsp"><img src="images/log.gif" alt="爱情旅游聚会" /></a></li>
             </div>
             <div><%if (Coolie.selectCookie(request,"sex")!=null&&Coolie.selectCookie(request,"sex").equals("男")){
-                %>
+            %>
                 <li><a class="change1" href="boy.jsp">情</a></li><%}else{
-                    %>
-                    <li><a class="change1" href="girl.jsp">情</a></li>
-               <% } %>
+                %>
+                <li><a class="change1" href="girl.jsp">情</a></li>
+                <% } %>
                 <li><a class="change2">旅</a></li>
                 <li><a class="change3">会</a></li>
             </div>
@@ -62,6 +61,7 @@
             <s:textfield cssClass="input" id="input1" onfocus="i1(this)" onblur="b(this)" name="username" value="用户名" /><br/>
             <s:password cssClass="input" name="password" /><br/>
             <s:textfield cssClass="input" id="input2" onfocus="i6(this)" onblur="b(this)"  name="verfi" value="验证码"/>
+            <s:radio list="{'记住我'}" name="knowme" />
             <s:submit cssClass="sub" value="Login"/>
         </s:form>
         <div class="vali">
@@ -88,7 +88,7 @@
             <s:textfield cssClass="input" id="input7" onfocus="i3(this)" onblur="b(this)" name="information" value="自我介绍" /><br/>
             <s:textfield cssClass="input" id="input8" onfocus="i4(this)" onblur="b(this)" name="profess" value="职业" /><br/>
             <s:textfield cssClass="input" id="input9" onfocus="i5(this)" onblur="b(this)" name="hobby" value="爱好" /><br/>
-            <s:radio name="sex" list="{'男','女'}" ></s:radio>
+            <s:radio name="sex" list="{'男','女'}" />
             <s:textfield cssClass="input" id="input10" onfocus="i6(this)" onblur="b(this)"  name="verfi" value="验证码"/>
             <s:submit cssClass="sub" value="Regist"/>
         </s:form>
@@ -103,7 +103,6 @@
     if (cookies!=null){
 %>
 <%
-
     for (Cookie co :cookies){
         if (co.getName().equals("username")){
 %>

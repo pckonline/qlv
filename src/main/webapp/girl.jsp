@@ -16,9 +16,9 @@
 </head>
 
 <body>
-<%--<%--%>
-<%--if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。--%>
-<%--%>--%>
+<%
+if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。
+%>
 <header>
     <h1><a href="index.jsp">夏の花世界</a></h1>
     <p>冥冥中一种花香扑鼻,令人陶醉于心的静谧,不禁回忆,我们相遇的那一季正是盛夏之花烂漫时...</p>
@@ -155,16 +155,16 @@
 <footer>
     <p>Design by DanceSmile</p>
 </footer>
-<%--<%--%>
-<%--}--%>
-<%--else--%>
-<%--{--%>
-<%--%>--%>
-<%--<%--%>
-<%--request.getRequestDispatcher("/login.jsp").forward(request,response);//当为空时，返回登录界面。--%>
-<%--%>--%>
-<%--<%--%>
-<%--}--%>
-<%--%>--%>
+<%
+}
+else
+{
+%>
+<%
+request.getRequestDispatcher("/login.jsp").forward(request,response);//当为空时，返回登录界面。
+%>
+<%
+}
+%>
 </body>
 </html>

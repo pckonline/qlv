@@ -18,9 +18,9 @@
     <script src="js/modernizr.js"></script>
 </head>
 <body>
-<%--<%--%>
-<%--if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。--%>
-<%--%>--%>
+<%
+if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。
+%>
 
 <div class="information1">
 
@@ -50,16 +50,16 @@
     <% } %>
 </div>
 
-<%--<%--%>
-<%--}--%>
-<%--else--%>
-<%--{--%>
-<%--%>--%>
-<%--<%--%>
-<%--request.getRequestDispatcher("/login.jsp").forward(request,response);//当为空时，返回登录界面。--%>
-<%--%>--%>
-<%--<%--%>
-<%--}--%>
-<%--%>--%>
+<%
+}
+else
+{
+%>
+<%
+request.getRequestDispatcher("/login.jsp").forward(request,response);//当为空时，返回登录界面。
+%>
+<%
+}
+%>
 </body>
 </html>

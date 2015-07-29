@@ -41,6 +41,7 @@
             <s:textfield cssClass="input" id="input1" onfocus="i3(this)" onblur="b(this)" name="username" value="用户名" /><br/>
             <s:password cssClass="input" name="password" /><br/>
             <s:textfield cssClass="input" id="input2" onfocus="i2(this)" onblur="b(this)"  name="verfi" value="验证码"/>
+            <s:radio list="{'记住我'}" name="knowme" />
             <s:submit cssClass="sub" value="Login"/>
         </s:form>
         <div class="vali">

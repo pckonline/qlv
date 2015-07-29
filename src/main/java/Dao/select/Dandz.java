@@ -46,7 +46,7 @@ public class Dandz {
     }
 
     //    验证是否登录成功 并加入关于自己网名，爱好，职业的coolkie
-    public boolean login(String username,String password) throws Exception {
+    public boolean login(String username,String password,boolean know) throws Exception {
         Session see = sf.openSession();
         Transaction tx = see.beginTransaction();
         int count=0;
@@ -79,12 +79,23 @@ public class Dandz {
             b=true;
             ActionContext ac = ActionContext.getContext();
             HttpServletResponse resp = ServletActionContext.getResponse();
-            coolie.addCookie(resp,"username",uname);
-            coolie.addCookie(resp,"profess",profess);
-            coolie.addCookie(resp,"hobby",hobby);
-            coolie.addCookie(resp,"sex",sex);
-            coolie.addCookie(resp, "zhanghao", zhanghao);
-            ac.getSession().put("uname",uname);
+            if (know){
+                coolie.addCookie(resp,"username",uname);
+                coolie.addCookie(resp,"profess",profess);
+                coolie.addCookie(resp,"hobby",hobby);
+                coolie.addCookie(resp,"sex",sex);
+                coolie.addCookie(resp, "zhanghao", zhanghao);
+                System.out.println("1");
+            }
+            else {
+                coolie.addCookieone(resp, "username", uname);
+                coolie.addCookieone(resp, "profess", profess);
+                coolie.addCookieone(resp, "hobby", hobby);
+                coolie.addCookieone(resp, "sex", sex);
+                coolie.addCookieone(resp, "zhanghao", zhanghao);
+                System.out.println("2");
+            }
+            ac.getSession().put("uname", uname);
         }
         tx.commit();
         see.close();
@@ -204,11 +215,11 @@ public class Dandz {
         infor.setProfess(profess);
         infor.setInformation(information);
         infor.setSex(sex);
-        System.out.println(information);
         lg.setUsername(username);
         lg.setPassword(password);
         lg.setUname(uname);
         lg.setInfor(infor);
+        System.out.println("1");
         see.save(lg);
         tx.commit();
         see.close();

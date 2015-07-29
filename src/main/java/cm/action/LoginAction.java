@@ -21,6 +21,15 @@ public class LoginAction extends ActionSupport {
     private String username;
     private String password;
     private String verfi;
+    private String knowme;
+
+    public String getKnowme() {
+        return knowme;
+    }
+
+    public void setKnowme(String knowme) {
+        this.knowme = knowme;
+    }
 
     public String getVerfi() {
         return verfi;
@@ -54,8 +63,11 @@ public class LoginAction extends ActionSupport {
         HttpServletRequest req = ServletActionContext.getRequest();
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
         Dandz sq = ctx.getBean("dandz",Dandz.class);
-        boolean b= sq.login(getUsername(),getPassword());
-        System.out.println(Coolie.selectCookie(req,"sex"));
+        boolean know=false;
+        if (getKnowme()!=null)
+            know=true;
+        boolean b= sq.login(getUsername(),getPassword(),know);
+        System.out.println(Coolie.selectCookie(req,"zhanghao"));
         if (getPassword().equals("")||getUsername().equals("")||getVerfi().equals("")){//验证是否有没输入的文本
             setPassword("");
             String s = "<script type=\"text/javascript\">cuowu(\"请输入完整的信息！\")</script>";

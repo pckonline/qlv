@@ -23,9 +23,9 @@
 
 </head>
 <body>
-<%--<%--%>
-<%--if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。--%>
-<%--%>--%>
+<%
+if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。
+%>
 <header>
     <h1><a href="">青涩の初夏</a></h1>
     <p>趁我们都还年轻,多欣赏下沿途的风景，不要错过了流年里温暖的人和物....</p>
@@ -163,16 +163,17 @@
 <footer>
     <p>Design by DanceSmile</p>
 </footer>
+
+<%
+}
+else
+{
+%>
+<%
+request.getRequestDispatcher("/login.jsp").forward(request,response);//当为空时，返回登录界面。
+%>
+<%
+}
+%>
 </body>
-<%--<%--%>
-<%--}--%>
-<%--else--%>
-<%--{--%>
-<%--%>--%>
-<%--<%--%>
-<%--request.getRequestDispatcher("/login.jsp").forward(request,response);//当为空时，返回登录界面。--%>
-<%--%>--%>
-<%--<%--%>
-<%--}--%>
-<%--%>--%>
 </html>
