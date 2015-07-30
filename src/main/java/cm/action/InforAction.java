@@ -27,6 +27,34 @@ public class InforAction extends ActionSupport {
     }
     private String boy_username;
     private String girl_username;
+    private String meet_day;
+    private String know_day;
+    private String love_day;
+
+    public String getKnow_day() {
+        return know_day;
+    }
+
+    public void setKnow_day(String know_day) {
+        this.know_day = know_day;
+    }
+
+    public String getLove_day() {
+        return love_day;
+    }
+
+    public void setLove_day(String love_day) {
+        this.love_day = love_day;
+    }
+
+    public String getMeet_day() {
+
+        return meet_day;
+    }
+
+    public void setMeet_day(String meet_day) {
+        this.meet_day = meet_day;
+    }
 
     public String getBoy_username() {
         return boy_username;
@@ -66,9 +94,12 @@ public class InforAction extends ActionSupport {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
         CompletInfor ci = ctx.getBean("complete", CompletInfor.class);
         HttpServletRequest request = ServletActionContext.getRequest();
-        ci.insetql(request,ci.selectid(request,getBoy_username()),ci.selectid(request,getGirl_username()));
+        ci.insetql(request,ci.selectid(request,getBoy_username()),ci.selectid(request,getGirl_username()),getMeet_day(),getKnow_day(),getLove_day());
         setBoy_username("");
         setGirl_username("");
+        setLove_day("");
+        setMeet_day("");
+        setKnow_day("");
         return "onetoone";
     }
 }

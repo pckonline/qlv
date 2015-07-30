@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        ">
@@ -16,20 +17,16 @@
         </property>
     </bean>
     <!--这个是写登录和注册等的sql执行bean-->
-    <bean id="dandz" class="Dao.select.Dandz" >
-        <property name="sf" ref="sessionFactory"/>
-        <property name="lg" ref="entity" />
-        <property name="infor" ref="infor"/>
-        <property name="coolie" ref="coolie"/>
-    </bean>
+    <bean id="dandz" class="Dao.select.Dandz" p:infor-ref="infor" p:sf-ref="sessionFactory"
+            p:coolie-ref="coolie" p:lg-ref="entity" />
+
     <bean id="entity" class="Dao.popj.entity.Regist" />
+    <bean id="love" class="Dao.popj.entity.Love" />
     <bean id="infor" class="Dao.popj.entity.Infor" />
     <!--加cookie的bean-->
     <bean id="coolie" class="Dao.cookie.Coolie"/>
     <!--更新信息的bean-->
-    <bean id="complete" class="Dao.select.CompletInfor" >
-        <property name="infor" ref="infor" />
-        <property name="sf" ref="sessionFactory"/>
-        <property name="coolie" ref="coolie"/>
-    </bean>
+    <bean id="complete" class="Dao.select.CompletInfor" p:sf-ref="sessionFactory" p:coolie-ref="coolie"
+            p:infor-ref="infor" p:love-ref="love" />
+
 </beans>

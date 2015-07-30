@@ -20,6 +20,12 @@ import java.util.List;
 public class CompletInfor {
     private SessionFactory sf;
     private Infor infor;
+    private Love love;
+
+    public void setLove(Love love) {
+        this.love = love;
+    }
+
     private Coolie coolie;
 
     public void setCoolie(Coolie coolie) {
@@ -81,12 +87,15 @@ public class CompletInfor {
         return id;
     }
     //传入Session,因为在查询中需要用到查询
-    public void insetql(HttpServletRequest request, int boy_id,int girl_id){
+    public void insetql(HttpServletRequest request, int boy_id,int girl_id,String meet_day,String know_day,String love_day){
         Session see = sf.openSession();
         Transaction tx = see.beginTransaction();
         Love love=new Love();
         love.setBoy_id(boy_id);
         love.setGirl_id(girl_id);
+        love.setMeet_day(meet_day);
+        love.setKnow_day(know_day);
+        love.setLove_day(love_day);
         see.save(love);
         tx.commit();
         see.close();

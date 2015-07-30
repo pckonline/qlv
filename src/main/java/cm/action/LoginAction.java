@@ -67,7 +67,6 @@ public class LoginAction extends ActionSupport {
         if (getKnowme()!=null)
             know=true;
         boolean b= sq.login(getUsername(),getPassword(),know);
-        System.out.println(Coolie.selectCookie(req,"zhanghao"));
         if (getPassword().equals("")||getUsername().equals("")||getVerfi().equals("")){//验证是否有没输入的文本
             setPassword("");
             String s = "<script type=\"text/javascript\">cuowu(\"请输入完整的信息！\")</script>";

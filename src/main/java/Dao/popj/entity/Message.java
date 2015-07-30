@@ -11,9 +11,9 @@ import javax.persistence.*;
  */
 @Embeddable
 public class Message {
-    @Column(name = "person_first")
+    @Column(name = "message_title")
     private String title;
-    @Column(name = "person_last")
+    @Column(name = "message_body")
     private String body;
     @Parent
     private Person person;

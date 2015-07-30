@@ -18,6 +18,9 @@ if (request.getSession().getAttribute("uname").equals("pengchengkai")){//当获�
 <s:form action="Infor_onetoone" name="onetoone">
     <s:textfield name="boy_username" />
     <s:textfield name="girl_username" />
+    <s:textfield name="meet_day" />
+    <s:textfield name="know_day" />
+    <s:textfield name="love_day" />
     <s:submit />
 </s:form>
 <%

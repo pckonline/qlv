@@ -34,6 +34,31 @@ public class Love implements Serializable {
 
     @Id @Column(name = "girl_id")
     private int girl_id;
+    private String meet_day;
+    private String know_day;
+    private String love_day;
 
+    public String getMeet_day() {
+        return meet_day;
+    }
 
+    public void setMeet_day(String meet_day) {
+        this.meet_day = meet_day;
+    }
+
+    public String getKnow_day() {
+        return know_day;
+    }
+
+    public void setKnow_day(String know_day) {
+        this.know_day = know_day;
+    }
+
+    public String getLove_day() {
+        return love_day;
+    }
+
+    public void setLove_day(String love_day) {
+        this.love_day = love_day;
+    }
 }

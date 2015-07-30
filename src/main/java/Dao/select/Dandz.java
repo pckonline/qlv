@@ -85,7 +85,6 @@ public class Dandz {
                 coolie.addCookie(resp,"hobby",hobby);
                 coolie.addCookie(resp,"sex",sex);
                 coolie.addCookie(resp, "zhanghao", zhanghao);
-                System.out.println("1");
             }
             else {
                 coolie.addCookieone(resp, "username", uname);
@@ -93,7 +92,6 @@ public class Dandz {
                 coolie.addCookieone(resp, "hobby", hobby);
                 coolie.addCookieone(resp, "sex", sex);
                 coolie.addCookieone(resp, "zhanghao", zhanghao);
-                System.out.println("2");
             }
             ac.getSession().put("uname", uname);
         }
@@ -178,7 +176,6 @@ public class Dandz {
                 .addEntity(Infor.class)
                 .setString("1",username )
                 .list();
-        System.out.println("1");
         for(Object ele : list){
             Object object = (Object) ele;
             Infor infor2 = (Infor) object;
