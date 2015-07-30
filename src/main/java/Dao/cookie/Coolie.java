@@ -16,6 +16,9 @@ public class Coolie {
     //加入cookie
     public void addCookie(HttpServletResponse resp,String key,String value) throws UnsupportedEncodingException {
 //因为tomcat7以上对中文cookie的限制，所以要编码
+        if (value==null){
+            return;
+        }
         Cookie cookie = new Cookie(key, URLEncoder.encode(value, "utf-8"));
         cookie.setPath("/");
         cookie.setMaxAge(30*24*3600);
@@ -24,6 +27,9 @@ public class Coolie {
     //一次性cookie
     public void addCookieone(HttpServletResponse resp,String key,String value) throws UnsupportedEncodingException {
 //因为tomcat7以上对中文cookie的限制，所以要编码
+        if (value==null){
+            return;
+        }
         Cookie cookie = new Cookie(key, URLEncoder.encode(value, "utf-8"));
         cookie.setPath("/");
         cookie.setMaxAge(-1);

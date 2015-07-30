@@ -63,13 +63,13 @@ if ((String)request.getSession().getAttribute("uname")!=null){//当获得的sess
     <div class="time_axis"></div>
     <ul>
         <li class="n1"><a href="/">相遇</a>
-            <div class="dateview">2011-06-27</div>
+            <div class="dateview"><%=Coolie.selectCookie(request,"meet_day")%></div>
         </li>
         <li class="n3"><a href="/">相知</a>
-            <div class="dateview">2012-10-01</div>
+            <div class="dateview"><%=Coolie.selectCookie(request,"know_day")%></div>
         </li>
         <li class="n5"><a href="/">相爱</a>
-            <div class="dateview">2014-10-05</div>
+            <div class="dateview"><%=Coolie.selectCookie(request,"love_day")%></div>
         </li>
     </ul>
 </div>
@@ -89,11 +89,6 @@ if ((String)request.getSession().getAttribute("uname")!=null){//当获得的sess
             <h2>关于他</h2>
             <ul>
                 <a href="girl.jsp"><img src="images/boy.jpg"></a>
-                <%
-                    ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
-                    Dandz sq = ctx.getBean("dandz",Dandz.class);
-                    sq.addAnother(request,Coolie.selectCookie(request,"zhanghao"));
-                %>
                 <p>网名：<%=Coolie.selectCookie(request,"anotherUname")%></p>
                 <p>职业：<%=Coolie.selectCookie(request,"anotherProfess")%></p>
                 <p>爱好：<%=Coolie.selectCookie(request,"anotherHobby")%></p>

@@ -26,6 +26,9 @@
     coolie.deleteCookie(response,"anotherUname");
     coolie.deleteCookie(response,"anotherProfess");
     coolie.deleteCookie(response,"anotherHobby");
+    coolie.deleteCookie(response,"meet_day");
+    coolie.deleteCookie(response,"know_day");
+    coolie.deleteCookie(response,"love_day");
     request.getSession().setAttribute("uname", null);
 %>
 <script type="text/javascript">

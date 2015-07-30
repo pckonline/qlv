@@ -2,6 +2,7 @@ package Dao.select;
 
 import Dao.cookie.Coolie;
 import Dao.popj.entity.Infor;
+import Dao.popj.entity.Love;
 import Dao.popj.entity.Regist;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.struts2.ServletActionContext;
@@ -49,6 +50,7 @@ public class Dandz {
     public boolean login(String username,String password,boolean know) throws Exception {
         Session see = sf.openSession();
         Transaction tx = see.beginTransaction();
+        HttpServletResponse resp = ServletActionContext.getResponse();
         int count=0;
         boolean b =false;
         String uname=null;
@@ -56,6 +58,12 @@ public class Dandz {
         String hobby=null;
         String sex=null;
         String zhanghao=null;
+        String anotherUname=null;
+        String anotherHobby=null;
+        String anotherProfess=null;
+        String meet_day=null;
+        String know_day=null;
+        String love_day=null;
         String sql = "select * from login l,infor i where l.infor_id=i.infor_id and username=?1 and password=?2";
         List list = see.createSQLQuery(sql)
                 .addEntity(Regist.class)
@@ -75,39 +83,8 @@ public class Dandz {
             sex = infor1.getSex();
             zhanghao=regist.getUsername();
         }
-        if (count>0){
-            b=true;
-            ActionContext ac = ActionContext.getContext();
-            HttpServletResponse resp = ServletActionContext.getResponse();
-            if (know){
-                coolie.addCookie(resp,"username",uname);
-                coolie.addCookie(resp,"profess",profess);
-                coolie.addCookie(resp,"hobby",hobby);
-                coolie.addCookie(resp,"sex",sex);
-                coolie.addCookie(resp, "zhanghao", zhanghao);
-            }
-            else {
-                coolie.addCookieone(resp, "username", uname);
-                coolie.addCookieone(resp, "profess", profess);
-                coolie.addCookieone(resp, "hobby", hobby);
-                coolie.addCookieone(resp, "sex", sex);
-                coolie.addCookieone(resp, "zhanghao", zhanghao);
-            }
-            ac.getSession().put("uname", uname);
-        }
-        tx.commit();
-        see.close();
-        return b;
-    }
-    //加入对方的网名，爱好，职业cookie
-    public void addAnother(HttpServletRequest request,String zhanghao) throws UnsupportedEncodingException {
-        Session see = sf.openSession();
-        Transaction tx = see.beginTransaction();
-        String anotherUname=null;
-        String anotherHobby=null;
-        String anotherProfess=null;
-        String sql =null;
-        if (Coolie.selectCookie(request,"sex").equals("男")){
+        //加入对方的网名，爱好，职业cookie
+        if (sex.equals("男")){
             sql = " select * from login l,infor i where l.infor_id=i.infor_id and" +
                     " l.infor_id=(select girl_id from love ll,login l where ll.boy_id=l.infor_id" +
                     " and l.username=?1)";
@@ -116,8 +93,7 @@ public class Dandz {
                     " l.infor_id=(select boy_id from love ll,login l where ll.girl_id=l.infor_id" +
                     " and l.username=?1)";
         }
-
-        List list=see.createSQLQuery(sql)
+        list=see.createSQLQuery(sql)
                 .addEntity(Regist.class)
                 .addEntity(Infor.class)
                 .setString("1",zhanghao )
@@ -129,14 +105,63 @@ public class Dandz {
             anotherUname=regist.getUname();
             anotherHobby=infor2.getHobby();
             anotherProfess=infor2.getProfess();
-            HttpServletResponse resp = ServletActionContext.getResponse();
-            coolie.addCookie(resp,"anotherHobby",anotherHobby);
-            coolie.addCookie(resp,"anotherUname",anotherUname);
-            coolie.addCookie(resp,"anotherProfess",anotherProfess);
+        }
+        if (sex.equals("男")){
+            sql="select * from love ll,login l where ll.boy_id=l.infor_id" +
+                    " and l.username=?1";
+        }else {
+            sql="select * from love ll,login l where ll.girl_id=l.infor_id" +
+                    " and l.username=?1";
+        }
+        list=see.createSQLQuery(sql)
+                .addEntity(Regist.class)
+                .addEntity(Love.class)
+                .setString("1",zhanghao )
+                .list();
+        for(Object ele : list){
+            Object[] objects = (Object[]) ele;
+            Regist regist= (Regist) objects[0];
+            Love love = (Love) objects[1];
+            meet_day=love.getMeet_day();
+            know_day=love.getKnow_day();
+            love_day=love.getLove_day();
+        }
+        if (count>0){
+            b=true;
+            ActionContext ac = ActionContext.getContext();
+            if (know){
+                coolie.addCookie(resp,"username",uname);
+                coolie.addCookie(resp,"profess",profess);
+                coolie.addCookie(resp,"hobby",hobby);
+                coolie.addCookie(resp,"sex",sex);
+                coolie.addCookie(resp, "zhanghao", zhanghao);
+                coolie.addCookie(resp,"anotherHobby",anotherHobby);
+                coolie.addCookie(resp,"anotherUname",anotherUname);
+                coolie.addCookie(resp,"anotherProfess",anotherProfess);
+                coolie.addCookie(resp,"meet_day",meet_day);
+                coolie.addCookie(resp,"know_day",know_day);
+                coolie.addCookie(resp,"love_day",love_day);
+            }
+            else {
+                coolie.addCookieone(resp, "username", uname);
+                coolie.addCookieone(resp, "profess", profess);
+                coolie.addCookieone(resp, "hobby", hobby);
+                coolie.addCookieone(resp, "sex", sex);
+                coolie.addCookieone(resp, "zhanghao", zhanghao);
+                coolie.addCookieone(resp,"anotherHobby",anotherHobby);
+                coolie.addCookieone(resp,"anotherUname",anotherUname);
+                coolie.addCookieone(resp,"anotherProfess",anotherProfess);
+                coolie.addCookieone(resp,"meet_day",meet_day);
+                coolie.addCookieone(resp,"know_day",know_day);
+                coolie.addCookieone(resp,"love_day",love_day);
+            }
+            ac.getSession().put("uname", uname);
         }
         tx.commit();
         see.close();
+        return b;
     }
+
     //查自己的信息,用于关于我里面的内容
     public String information(String username) throws UnsupportedEncodingException {
         Session see = sf.openSession();
