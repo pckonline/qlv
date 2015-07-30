@@ -33,7 +33,7 @@ public class Person {
         this.message = name;
     }
 
-    @Id @Column(name = "person_id")
+    @Id @Column(name = "message_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String username;

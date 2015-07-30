@@ -105,14 +105,23 @@ div.title1{
     color: #bebebe;
 }
 .information1{
-    width: 1000px; margin: 45px auto 30px; background: rgba(248,227,215,.7); height: 257px; overflow: hidden
+    width: 1000px; margin: 45px auto 30px; background: rgba(248,227,215,.7); height: 322px; overflow: hidden
+}
+.message{
+    width: 1000px; margin: 45px auto 30px; background: rgba(248,227,215,.7); height: 600px; overflow: hidden
 }
 .information{
-    font-size: 200%;
-    color: #ececff;;
+    color: #000000;;
     resize: none;
     width: 1000px;
-    height: 123px;
+    height: 120px;
+}
+.information2{
+    font-size: 150%;
+    color: #000000;;
+    resize: none;
+    width: 1000px;
+    height: 42px;
 }
 .sub{
     position: relative;

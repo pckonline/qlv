@@ -47,7 +47,7 @@ if ((String)request.getSession().getAttribute("uname")!=null){//当获得的sess
     <ul>
         <li><a href="/index.jsp">首页</a></li>
         <li><a href="aboutme.jsp">关于我</a></li>
-        <li><a href="#">慢生活</a></li>
+        <li><a href="slowlife.jsp">慢生活</a></li>
         <li><a href="#">留言板</a></li>
     </ul>
 </div>

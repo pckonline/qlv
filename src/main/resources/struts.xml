@@ -27,5 +27,9 @@
             <result name="girl">girl.jsp</result>
             <result name="onetoone">/guanli/onetoone.jsp</result>
         </action>
-    </package>
+        <action name="Message_*" class="cm.action.MeaageAction" method="{1}">
+            <result name="boy">boy.jsp</result>
+            <result name="girl">girl.jsp</result>
+        </action>
+        </package>
 </struts>
