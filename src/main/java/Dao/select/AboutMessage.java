@@ -1,15 +1,18 @@
 package Dao.select;
 
 import Dao.cookie.Coolie;
+import Dao.popj.entity.Infor;
 import Dao.popj.entity.Message;
 import Dao.popj.entity.Person;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.type.StandardBasicTypes;
 
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 
 /**
@@ -42,6 +45,31 @@ public class AboutMessage  {
         see.save(person);
         tx.commit();
         see.close();
+    }
+    //查看自己发布的消息
+    public List selfMessage(String username){
+        Session see = sf.openSession();
+        Transaction tx = see.beginTransaction();
+        String sql ="select * from message_inf where username =?1 order by message_id desc limit 5 ";
+        List list = see.createSQLQuery(sql)
+                .addEntity(Person.class)
+                .setString("1",username)
+                .list();
+        tx.commit();
+        see.close();
+        return list;
+    }
+    //查看全部人发布的消息
+    public List allMessage(String username){
+        Session see = sf.openSession();
+        Transaction tx = see.beginTransaction();
+        String sql ="select * from message_inf order by message_id desc limit 20 ";
+        List list = see.createSQLQuery(sql)
+                .addEntity(Person.class)
+                .list();
+        tx.commit();
+        see.close();
+        return list;
     }
 
 }

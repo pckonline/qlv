@@ -2,6 +2,9 @@
 <%@ page import="Dao.select.Dandz" %>
 <%@ page import="org.springframework.context.support.ClassPathXmlApplicationContext" %>
 <%@ page import="org.springframework.context.ApplicationContext" %>
+<%@ page import="Dao.select.AboutMessage" %>
+<%@ page import="java.util.List" %>
+<%@ page import="Dao.popj.entity.Person" %>
 <%--
   Created by IntelliJ IDEA.
   User: online
@@ -102,56 +105,31 @@ if ((String)request.getSession().getAttribute("uname")!=null){//当获得的sess
 
         </div>
         <div class="newslist">
-            <h2>最新日志</h2>
-            <ul>
-                <li><a href="/">女孩都有浪漫的小情怀</a></li>
-                <li><a href="/">也许下个路口就会遇见希望</a></li>
-                <li><a href="/"> 6月毕业季，祝福送给你</a></li>
-                <li><a href="/"> 生活常有缺席的-可搞笑从来不缺席</a></li>
-                <li><a href="/"> 为了一个不存在的梦，执念了那么多年</a></li>
-                <li><a href="/"> 妹妹，明天你就要嫁人啦</a></li>
-                <li><a href="/"> 女孩都有浪漫的小情怀</a></li>
-                <li><a href="/"> 也许下个路口就会遇见希望</a></li>
-                <li><a href="/"> 6月毕业季，祝福送给你</a></li>
-            </ul>
-        </div>
-        <div class="viny">
-            <ul>
-                <dl>
-                    <dt class="art"><img src="images/artwork.png" alt="专辑"></dt>
-                    <dd class="icon-song"><span></span>南方姑娘</dd>
-                    <dd class="icon-artist"><span></span>歌手：赵雷</dd>
-                    <dd class="icon-album"><span></span>专辑：《赵小雷》</dd>
-                    <dd class="music">
-                        <audio src="images/nf.mp3" controls></audio>
-                    </dd>
-                    <!--也可以添加loop属性 音频加载到末尾时，会重新播放-->
-                </dl>
-            </ul>
+            <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=3" width="130" height="230" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" ></iframe>
         </div>
     </div>
     <!--l_box end -->
     <div class="r_box">
-        <li> <a href="/"><img src="images/01.jpg"></a>
-            <h3><a href="/">你是什么人便会遇上什么人</a></h3>
-            <p>有时就为了一句狠话，像心头一口毒钉，永远麻痺着亲密感情交流。恶言，真要慎出，平日多誠心爱语，乃最简易之佈施。</p>
-        </li>
-        <li> <a href="/"><img src="images/02.jpg"></a>
-            <h3><a href="/">爱情没有永远，地老天荒也走不完</a></h3>
-            <p>也许，爱情没有永远，地老天荒也走不完，生命终结的末端，苦短情长。站在岁月的边端，那些美丽的定格，心伤的绝恋，都被四季的掩埋，一去不返。徒剩下这荒芜的花好月圆，一路相随，流离天涯背负了谁的思念？</p>
-        </li>
-        <li> <a href="/"><img src="images/03.jpg"></a>
-            <h3><a href="/">女孩都有浪漫的小情怀——浪漫的求婚词</a></h3>
-            <p>还在为浪漫的求婚词而烦恼不知道该怎么说吗？女孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
-        </li>
-        <li> <a href="/"><img src="images/04.jpg"></a>
-            <h3><a href="/">擦肩而过</a></h3>
-            <p>《擦肩而过》文/清河鱼 编绘/天朝羽打开一扇窗，我不曾把你想得平常。看季节一一过往。你停留的那个地方，是否依然花儿开放？在夜里守靠着梦中的，想那仿佛前世铭刻进心肠的</p>
-        </li>
-        <li> <a href="/"><img src="images/01.jpg"></a>
-            <h3><a href="/">擦肩而过</a></h3>
-            <p>《擦肩而过》文/清河鱼 编绘/天朝羽打开一扇窗，我不曾把你想得平常。看季节一一过往。你停留的那个地方，是否依然花儿开放？在夜里守靠着梦中的，想那仿佛前世铭刻进心肠的</p>
-        </li>
+        <%
+            ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
+            AboutMessage sq = ctx.getBean("aboutmessage",AboutMessage.class);
+            List list =sq.selfMessage(Coolie.selectCookie(request,"zhanghao"));
+            for(Object ele : list){
+        %>
+
+        <%
+                Object object = (Object) ele;
+                Person person = (Person) ele;
+        %>
+        <li> <a href="bigmessage.jsp?title=<%=person.getMessage().getTitle()%>&body=<%=person.getMessage().getBody()%>"><img src="images/01.jpg"></a>
+            <h3><a href="bigmessage.jsp?title=<%=person.getMessage().getTitle()%>&body=<%=person.getMessage().getBody()%>">  <%=person.getMessage().getTitle()%></a></h3>
+            <p><%=person.getMessage().getBody()%></p>
+            </li>
+        <%
+
+            }
+        %>
+
     </div>
 </article>
 <footer>

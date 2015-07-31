@@ -1,4 +1,5 @@
 import Dao.popj.entity.Love;
+import Dao.select.AboutMessage;
 import Dao.select.Dandz;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,9 +12,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Text {
     public static void main(String[] args) throws Exception {
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
-        Dandz sq = ctx.getBean("dandz",Dandz.class);
-        String sql = sq.information("online");
-        System.out.println(sql);
+//        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
+//        AboutMessage sq = ctx.getBean("aboutmessage",AboutMessage.class);
+//
+//        sq.selfMessage("online");
     }
 }

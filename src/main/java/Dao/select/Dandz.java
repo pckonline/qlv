@@ -84,7 +84,7 @@ public class Dandz {
             zhanghao=regist.getUsername();
         }
         //加入对方的网名，爱好，职业cookie
-        if (sex.equals("男")){
+        if (sex!=null&&sex.equals("男")){
             sql = " select * from login l,infor i where l.infor_id=i.infor_id and" +
                     " l.infor_id=(select girl_id from love ll,login l where ll.boy_id=l.infor_id" +
                     " and l.username=?1)";
@@ -106,26 +106,29 @@ public class Dandz {
             anotherHobby=infor2.getHobby();
             anotherProfess=infor2.getProfess();
         }
-        if (sex.equals("男")){
-            sql="select * from love ll,login l where ll.boy_id=l.infor_id" +
-                    " and l.username=?1";
-        }else {
-            sql="select * from love ll,login l where ll.girl_id=l.infor_id" +
-                    " and l.username=?1";
+        if (sex!=null){
+            if (sex.equals("男")){
+                sql="select * from love ll,login l where ll.boy_id=l.infor_id" +
+                        " and l.username=?1";
+            }else {
+                sql="select * from love ll,login l where ll.girl_id=l.infor_id" +
+                        " and l.username=?1";
+            }
+            list=see.createSQLQuery(sql)
+                    .addEntity(Regist.class)
+                    .addEntity(Love.class)
+                    .setString("1",zhanghao )
+                    .list();
+            for(Object ele : list){
+                Object[] objects = (Object[]) ele;
+                Regist regist= (Regist) objects[0];
+                Love love = (Love) objects[1];
+                meet_day=love.getMeet_day();
+                know_day=love.getKnow_day();
+                love_day=love.getLove_day();
+            }
         }
-        list=see.createSQLQuery(sql)
-                .addEntity(Regist.class)
-                .addEntity(Love.class)
-                .setString("1",zhanghao )
-                .list();
-        for(Object ele : list){
-            Object[] objects = (Object[]) ele;
-            Regist regist= (Regist) objects[0];
-            Love love = (Love) objects[1];
-            meet_day=love.getMeet_day();
-            know_day=love.getKnow_day();
-            love_day=love.getLove_day();
-        }
+
         if (count>0){
             b=true;
             ActionContext ac = ActionContext.getContext();
@@ -204,7 +207,6 @@ public class Dandz {
         for(Object ele : list){
             Object object = (Object) ele;
             Infor infor2 = (Infor) object;
-            System.out.println("2");
             information=infor2.getInformation();
         }
         return information;

@@ -9,6 +9,11 @@ import javax.persistence.*;
 @Entity
 @Table(name = "message_inf")
 public class Person {
+    @Id @Column(name = "message_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String username;
+    private Message message;
     public int getId() {
         return id;
     }
@@ -32,10 +37,4 @@ public class Person {
     public void setMessage(Message name) {
         this.message = name;
     }
-
-    @Id @Column(name = "message_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String username;
-    private Message message;
 }
