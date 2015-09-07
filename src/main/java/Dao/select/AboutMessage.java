@@ -2,6 +2,7 @@ package Dao.select;
 
 import Dao.cookie.Coolie;
 import Dao.popj.entity.Infor;
+import Dao.popj.entity.Lmessage;
 import Dao.popj.entity.Message;
 import Dao.popj.entity.Person;
 import org.hibernate.Session;
@@ -22,6 +23,11 @@ public class AboutMessage  {
     private SessionFactory sf;
     private Coolie coolie;
     private Person person;
+    private Lmessage lmessage;
+
+    public void setLmessage(Lmessage lmessage) {
+        this.lmessage = lmessage;
+    }
 
     public void setSf(SessionFactory sf) {
         this.sf = sf;
@@ -43,6 +49,16 @@ public class AboutMessage  {
         person.setUsername(Coolie.selectCookie(request,"zhanghao"));
         person.setMessage(new Message(title, body));
         see.save(person);
+        tx.commit();
+        see.close();
+    }
+    //留言写入数据库
+    public void valLmessage(HttpServletRequest request,String body) throws UnsupportedEncodingException {
+        Session see= sf.openSession();
+        Transaction tx = see.beginTransaction();
+        lmessage.setUsername(Coolie.selectCookie(request,"zhanghao"));
+        lmessage.setLeaveMessage(body);
+        see.save(lmessage);
         tx.commit();
         see.close();
     }

@@ -18,18 +18,19 @@
     </bean>
     <!--这个是写登录和注册等的sql执行bean-->
     <bean id="dandz" class="Dao.select.Dandz" p:infor-ref="infor" p:sf-ref="sessionFactory"
-            p:coolie-ref="coolie" p:lg-ref="entity" />
+            p:coolie-ref="coolie" p:lg-ref="entity" p:lmessage-ref="lmessage" />
     <bean id="aboutmessage" class="Dao.select.AboutMessage" p:sf-ref="sessionFactory"
-          p:coolie-ref="coolie" p:person-ref="person" />
+          p:coolie-ref="coolie" p:person-ref="person" p:lmessage-ref="lmessage" />
     <bean id="entity" class="Dao.popj.entity.Regist" />
     <bean id="love" class="Dao.popj.entity.Love" />
     <bean id="infor" class="Dao.popj.entity.Infor" />
     <bean id="person" class="Dao.popj.entity.Person" />
     <bean id="message" class="Dao.popj.entity.Message" />
+    <bean id="lmessage" class="Dao.popj.entity.Lmessage" />
     <!--加cookie的bean-->
     <bean id="coolie" class="Dao.cookie.Coolie"/>
     <!--更新信息的bean-->
     <bean id="complete" class="Dao.select.CompletInfor" p:sf-ref="sessionFactory" p:coolie-ref="coolie"
-            p:infor-ref="infor" p:love-ref="love" />
+            p:infor-ref="infor" p:love-ref="love" p:lmessage-ref="lmessage" />
 
 </beans>

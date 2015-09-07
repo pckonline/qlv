@@ -26,18 +26,6 @@ if ((String)request.getSession().getAttribute("uname")!=null){//当获得的sess
     <h1><a href="index.jsp">夏の花世界</a></h1>
     <p>冥冥中一种花香扑鼻,令人陶醉于心的静谧,不禁回忆,我们相遇的那一季正是盛夏之花烂漫时...</p>
 </header>
-<%
-    if (request.getSession().getAttribute("count")!=null&&request.getSession().getAttribute("count").equals("one")){
-        %>
-<script type="text/javascript">
-    setTimeout(function(){    window.location.reload();}, 100);
-</script>
-<%
-    request.getSession().setAttribute("count","two");
-%>
-<%
-    }
-%>
 　
 <!--nav begin-->
 <div id="nav">
@@ -45,7 +33,8 @@ if ((String)request.getSession().getAttribute("uname")!=null){//当获得的sess
         <li><a href="index.jsp">首页</a></li>
         <li><a href="aboutme.jsp">关于我</a></li>
         <li><a href="slowlife.jsp">慢生活</a></li>
-        <li><a href="#">留言板</a></li>
+        <li><a href="messageboard.jsp">写给他（她）</a></li>
+        <li><a href="seelmessage.jsp">留言板</a></li>
     </ul>
 </div>
 <!--nav end-->

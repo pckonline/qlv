@@ -31,6 +31,16 @@ public class InforAction extends ActionSupport {
     private String know_day;
     private String love_day;
 
+    public String getLmessage() {
+        return lmessage;
+    }
+
+    public void setLmessage(String lmessage) {
+        this.lmessage = lmessage;
+    }
+
+    private String lmessage;
+
     public String getKnow_day() {
         return know_day;
     }
@@ -82,7 +92,21 @@ public class InforAction extends ActionSupport {
         CompletInfor ci = ctx.getBean("complete", CompletInfor.class);
         HttpServletRequest request = ServletActionContext.getRequest();
         HttpServletResponse resp = ServletActionContext.getResponse();
-        ci.newInfor(request,resp,getInfor());
+        ci.newInfor(request,resp,getLmessage());
+        if(Coolie.selectCookie(request,"sex").equals("男")){
+            return "boy";
+        }else {
+            return "girl";
+        }
+    }
+    //提交留言
+    public String lmessage () throws UnsupportedEncodingException {
+        ActionContext ac = ActionContext.getContext();
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
+        CompletInfor ci = ctx.getBean("complete", CompletInfor.class);
+        HttpServletRequest request = ServletActionContext.getRequest();
+        HttpServletResponse resp = ServletActionContext.getResponse();
+        ci.writelmessage(request,resp,getLmessage());
         if(Coolie.selectCookie(request,"sex").equals("男")){
             return "boy";
         }else {

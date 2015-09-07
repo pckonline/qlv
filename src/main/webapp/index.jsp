@@ -22,6 +22,18 @@
     </script>
 </head>
 <body style="background-color: #caffff">
+<%
+    if (request.getSession().getAttribute("count")!=null&&request.getSession().getAttribute("count").equals("one")){
+%>
+<script type="text/javascript">
+    setTimeout(function(){    window.location.href="/index.jsp";}, 1000);
+</script>
+<%
+    request.getSession().setAttribute("count","two");
+%>
+<%
+    }
+%>
 <div class="dz">
     <div class="z">
         <a class="dz">注册</a>
@@ -57,17 +69,17 @@
 <div class="bordr2">
     <%--登录界面--%>
     <div class="log">
-        <s:form name="log" action="Login_login">
+        <form name="log" class="form-horizontal" action="Login_login" method="post">
             <s:actionmessage/><br/>
-            <s:textfield cssClass="input" id="input1" onfocus="i1(this)" onblur="b(this)" name="username" value="用户名" /><br/>
-            <s:password cssClass="input" name="password" /><br/>
-            <s:textfield cssClass="input" id="input2" onfocus="i6(this)" onblur="b(this)"  name="verfi" value="验证码"/>
-            <s:radio list="{'记住我'}" name="knowme" />
-            <s:submit cssClass="sub" value="Login"/>
-        </s:form>
+            <input type="text" class="form-control" id="input1" name="username" placeholder="用户名" /><br/>
+            <input type="text" class="form-control" name="password" placeholder="密码" /><br/>
+            <input type="text" class="form-control" id="input2"   name="verfi" placeholder="验证码"/><br/>
+            <input type="checkbox" name="knowme">记住我
+            <input type="submit" class="sub" value="Login"/>
+        </form>
         <div class="vali">
             <img style="width:130px;height: 50px" src="Login_img" id="img">
-            <a class="change" href="javascript:_change()">change</a>
+            <a href="javascript:_change()" class="btn btn-default btn-lg active" role="button">change</a>
         </div>
     </div>
     <div class="welcome">welcome__づ￣ 3￣)づ</div>
@@ -96,7 +108,7 @@
         </form>
         <div class="vali">
             <img style="width:130px;height: 50px" src="Regi_img" id="img1">
-            <a class="change" href="javascript:_change1()">change</a>
+            <a href="javascript:_change1()" class="btn btn-default btn-lg active" role="button">change</a>
         </div>
     </div>
 </div>

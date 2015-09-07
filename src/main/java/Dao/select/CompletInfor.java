@@ -2,6 +2,7 @@ package Dao.select;
 
 import Dao.cookie.Coolie;
 import Dao.popj.entity.Infor;
+import Dao.popj.entity.Lmessage;
 import Dao.popj.entity.Love;
 import Dao.popj.entity.Regist;
 import org.hibernate.Query;
@@ -21,6 +22,7 @@ public class CompletInfor {
     private SessionFactory sf;
     private Infor infor;
     private Love love;
+    private Lmessage lmessage;
 
     public void setLove(Love love) {
         this.love = love;
@@ -97,6 +99,21 @@ public class CompletInfor {
         love.setKnow_day(know_day);
         love.setLove_day(love_day);
         see.save(love);
+        tx.commit();
+        see.close();
+    }
+    //写入留言
+
+    public void setLmessage(Lmessage lmessage) {
+        this.lmessage = lmessage;
+    }
+
+    public void writelmessage(HttpServletRequest request, HttpServletResponse resp, String lmessage1) throws UnsupportedEncodingException {
+        Session see = sf.openSession();
+        Transaction tx = see.beginTransaction();
+        lmessage.setUsername(Coolie.selectCookie(request,"zhanghao"));
+        lmessage.setLeaveMessage(lmessage1);
+        see.save(lmessage);
         tx.commit();
         see.close();
     }

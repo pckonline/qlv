@@ -33,25 +33,14 @@ if ((String)request.getSession().getAttribute("uname")!=null){//当获得的sess
     <h1><a href="">青涩の初夏</a></h1>
     <p>趁我们都还年轻,多欣赏下沿途的风景，不要错过了流年里温暖的人和物....</p>
 </header>
-<%
-    if (request.getSession().getAttribute("count")!=null&&request.getSession().getAttribute("count").equals("one")){
-%>
-<script type="text/javascript">
-    setTimeout(function(){    window.location.reload();}, 1000);
-</script>
-<%
-    request.getSession().setAttribute("count","two");
-%>
-<%
-    }
-%>
 <!--nav begin-->
 <div id="nav">
     <ul>
         <li><a href="/index.jsp">首页</a></li>
         <li><a href="aboutme.jsp">关于我</a></li>
         <li><a href="slowlife.jsp">慢生活</a></li>
-        <li><a href="#">留言板</a></li>
+        <li><a href="messageboard.jsp">写给他（她）</a></li>
+        <li><a href="seelmessage.jsp">留言板</a></li>
     </ul>
 </div>
 <!--nav end-->

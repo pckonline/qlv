@@ -18,6 +18,7 @@
         <mapping class="Dao.popj.entity.Person" />
         <mapping class="Dao.popj.entity.Love" />
         <mapping class="Dao.popj.entity.Message" />
+        <mapping class="Dao.popj.entity.Lmessage" />
 
     </session-factory>
 </hibernate-configuration>

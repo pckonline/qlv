@@ -2,6 +2,7 @@ package Dao.select;
 
 import Dao.cookie.Coolie;
 import Dao.popj.entity.Infor;
+import Dao.popj.entity.Lmessage;
 import Dao.popj.entity.Love;
 import Dao.popj.entity.Regist;
 import com.opensymphony.xwork2.ActionContext;
@@ -25,6 +26,11 @@ public class Dandz {
     private Regist lg;
     private Infor infor;
     private Coolie coolie;
+    private Lmessage lmessage;
+
+    public void setLmessage(Lmessage lmessage) {
+        this.lmessage = lmessage;
+    }
 
     public void setCoolie(Coolie coolie) {
         this.coolie = coolie;
@@ -210,6 +216,31 @@ public class Dandz {
             information=infor2.getInformation();
         }
         return information;
+    }
+    //查看留言
+    public String seelmessage(HttpServletRequest request,String username) throws UnsupportedEncodingException {
+        Session see = sf.openSession();
+        Transaction tx = see.beginTransaction();
+        String lmessage=null;
+        String sql=null;
+        if (Coolie.selectCookie(request,"sex").equals("男")){
+            sql = " select * from lmessage_inf where lmessage_id=(select girl_id from" +
+                    " login l,love ll where ll.boy_id=l.id and l.username=?1)";
+        }else {
+            sql = " select * from lmessage_inf where lmessage_id=(select boy_id from" +
+                    " login l,love ll where ll.girl_id=l.id and l.username=?1)";
+        }
+        List list=see.createSQLQuery(sql)
+                .addEntity(Lmessage.class)
+                .setString("1",username )
+                .list();
+        for(Object ele : list){
+            Object object = (Object) ele;
+            Lmessage l = (Lmessage) object;
+            lmessage=l.getLeaveMessage();
+        }
+        System.out.println("3");
+        return lmessage;
     }
     public boolean valiUsername(String username){//验证用户名是否有人注册,有人注册:true
         boolean b=false;
