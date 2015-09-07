@@ -22,8 +22,8 @@ div.bordr2{
 div.bordr3{
     position: absolute;
     background-color: #ececff;
-    width: 400px;
-    height: 610px;
+    width: 346px;
+    height: 555px;
     right:100px;
     top:150px;
     word-warp: break-word;
@@ -88,9 +88,6 @@ a.dz:hover{
     background-color: #ffa6ff;
 }
 /*登录界面*/
-div.log{
-    padding-left: 30px;
-}
 div.title1{
     position: absolute;
     top: 3px;

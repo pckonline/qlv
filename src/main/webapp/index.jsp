@@ -14,6 +14,7 @@
     <title>情旅会</title>
     <meta name="keywords" content="情旅会,爱情旅,聚会更方便,love,tourism,party" />
     <meta name="description" content=""/>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/l.css">
     <link rel="stylesheet" type="text/css" href="css/test.css">
     <script src="js/jquery.js"></script>
@@ -74,24 +75,25 @@
 
 <%--注册界面--%>
 <div class="bordr3">
-    <div class="log">
-        <s:form name="log" action="Regi_regi">
-            <div class="title1">
-                <p style="margin: 0">提示：用户名和密码只能为</p>
-                <p style="margin: 0">6-12位的数字和字母，</p>
-                <p style="margin: 0">无提示处填写密码。</p>
-            </div>
-            <s:textfield cssClass="input" id="input3" onfocus="i1(this)" onblur="b(this)" name="username" value="用户名" /><br/>
-            <s:password cssClass="input" id="input4"  name="password" value="密码" /><br/>
-            <s:password cssClass="input" id="input5" name="passwordtoo" value="确认" /><br/>
-            <s:textfield cssClass="input" id="input6" onfocus="i2(this)" onblur="b(this)" name="uname" value="昵称" /><br/>
-            <s:textfield cssClass="input" id="input7" onfocus="i3(this)" onblur="b(this)" name="information" value="自我介绍" /><br/>
-            <s:textfield cssClass="input" id="input8" onfocus="i4(this)" onblur="b(this)" name="profess" value="职业" /><br/>
-            <s:textfield cssClass="input" id="input9" onfocus="i5(this)" onblur="b(this)" name="hobby" value="爱好" /><br/>
-            <s:radio name="sex" list="{'男','女'}" />
-            <s:textfield cssClass="input" id="input10" onfocus="i6(this)" onblur="b(this)"  name="verfi" value="验证码"/>
-            <s:submit cssClass="sub" value="Regist"/>
-        </s:form>
+    <div>
+        <form class="form-horizontal" name="log" action="Regi_regi" method="post">
+            <%--<div class="title1">--%>
+                <%--<p style="margin: 0">提示：用户名和密码只能为</p>--%>
+                <%--<p style="margin: 0">6-12位的数字和字母，</p>--%>
+                <%--<p style="margin: 0">无提示处填写密码。</p>--%>
+            <%--</div>--%>
+            <input type="text" class="form-control" id="input3" name="username" placeholder="用户名" /><br/>
+            <input type="password" class="form-control" id="input4"  name="password" placeholder="密码"  /><br/>
+            <input type="password" class="form-control" id="input5" name="passwordtoo" placeholder="再次输入"  /><br/>
+            <input type="text" class="form-control" id="input6" name="uname" placeholder="昵称" /><br/>
+            <input type="text" class="form-control" id="input7" name="information" placeholder="关于我" /><br/>
+            <input type="text" class="form-control" id="input8" name="profess" placeholder="职业" /><br/>
+            <input type="text" class="form-control" id="input9" name="hobby" placeholder="爱好" /><br/>
+            <input type="radio" name="sex" value="男" />男
+            <input type="radio" name="sex" value="女" />女
+            <input type="text" class="form-control" id="input10"   name="verfi" placeholder="验证码"/>
+            <input type="submit" class="sub" value="Regist"/>
+        </form>
         <div class="vali">
             <img style="width:130px;height: 50px" src="Regi_img" id="img1">
             <a class="change" href="javascript:_change1()">change</a>
@@ -129,5 +131,9 @@
 <%
     }
 %>
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
