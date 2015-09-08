@@ -238,7 +238,12 @@ public class Dandz {
         for(Object ele : list){
             Object[] objects = (Object[]) ele;
             Lmessage l = (Lmessage) objects[0];
-            lmessage=l.getLeaveMessage();
+            if (lmessage!=null){
+                lmessage+=l.getLeaveMessage();
+            }else {
+                lmessage=l.getLeaveMessage();
+            }
+
         }
         return lmessage;
     }

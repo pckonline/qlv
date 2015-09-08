@@ -52,16 +52,6 @@ public class AboutMessage  {
         tx.commit();
         see.close();
     }
-    //留言写入数据库
-    public void valLmessage(HttpServletRequest request,String body) throws UnsupportedEncodingException {
-        Session see= sf.openSession();
-        Transaction tx = see.beginTransaction();
-        lmessage.setUsername(Coolie.selectCookie(request,"zhanghao"));
-        lmessage.setLeaveMessage(body);
-        see.save(lmessage);
-        tx.commit();
-        see.close();
-    }
     //查看自己发布的消息
     public List selfMessage(String username){
         Session see = sf.openSession();
