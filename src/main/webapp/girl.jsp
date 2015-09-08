@@ -69,7 +69,7 @@
             <p>爱好：<%=Coolie.selectCookie(request,"hobby")%></p>
 
         </ul></div>
-        <div class="col-xs-2"><a href="aboutanother.jsp.jsp"><img src="images/05.jpg" alt="关于他"/></a></div>
+        <div class="col-xs-2"><a href="aboutanother.jsp"><img src="images/05.jpg" alt="关于他"/></a></div>
         <div class="col-xs-4"><ul>
             <p>网名：<%=Coolie.selectCookie(request,"anotherUname")%></p>
             <p>职业：<%=Coolie.selectCookie(request,"anotherProfess")%></p>

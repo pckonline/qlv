@@ -224,22 +224,22 @@ public class Dandz {
         String lmessage=null;
         String sql=null;
         if (Coolie.selectCookie(request,"sex").equals("男")){
-            sql = " select * from lmessage_inf where lmessage_id=(select girl_id from" +
+            sql = " select * from lmessage_inf l1,login l where l1.username=l.username and l.id=(select girl_id from" +
                     " login l,love ll where ll.boy_id=l.id and l.username=?1)";
         }else {
-            sql = " select * from lmessage_inf where lmessage_id=(select boy_id from" +
+            sql = " select * from lmessage_inf l1,login l where l1.username=l.username and l.id=(select boy_id from" +
                     " login l,love ll where ll.girl_id=l.id and l.username=?1)";
         }
         List list=see.createSQLQuery(sql)
                 .addEntity(Lmessage.class)
-                .setString("1",username )
+                .addEntity(Regist.class)
+                .setString("1", username)
                 .list();
         for(Object ele : list){
-            Object object = (Object) ele;
-            Lmessage l = (Lmessage) object;
+            Object[] objects = (Object[]) ele;
+            Lmessage l = (Lmessage) objects[0];
             lmessage=l.getLeaveMessage();
         }
-        System.out.println("3");
         return lmessage;
     }
     public boolean valiUsername(String username){//验证用户名是否有人注册,有人注册:true
