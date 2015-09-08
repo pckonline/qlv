@@ -13,9 +13,7 @@
 <html>
 <head>
     <title>另一半</title>
-    <link href="css/index.css" rel="stylesheet">
     <link href="css/l.css" rel="stylesheet">
-    <script src="js/modernizr.js"></script>
 </head>
 <body>
 <%

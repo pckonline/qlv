@@ -92,7 +92,7 @@ public class InforAction extends ActionSupport {
         CompletInfor ci = ctx.getBean("complete", CompletInfor.class);
         HttpServletRequest request = ServletActionContext.getRequest();
         HttpServletResponse resp = ServletActionContext.getResponse();
-        ci.newInfor(request,resp,getLmessage());
+        ci.newInfor(request,resp,getInfor());
         if(Coolie.selectCookie(request,"sex").equals("男")){
             return "boy";
         }else {

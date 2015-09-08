@@ -11,9 +11,7 @@
 <html>
 <head>
     <title>关于我</title>
-    <link href="css/index.css" rel="stylesheet">
     <link href="css/l.css" rel="stylesheet">
-    <script src="js/modernizr.js"></script>
 </head>
 <body>
 <%

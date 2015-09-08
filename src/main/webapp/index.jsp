@@ -14,14 +14,17 @@
     <title>情旅会</title>
     <meta name="keywords" content="情旅会,爱情旅,聚会更方便,love,tourism,party" />
     <meta name="description" content=""/>
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/l.css">
     <link rel="stylesheet" type="text/css" href="css/test.css">
     <script src="js/jquery.js"></script>
     <script type="text/javascript" src="js/myJs.js">
+        </script>
+    <script type="text/javascript" src="js/bootstrap.min.js">
     </script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
-<body style="background-color: #caffff">
+<body>
 <%
     if (request.getSession().getAttribute("count")!=null&&request.getSession().getAttribute("count").equals("one")){
 %>
@@ -34,6 +37,7 @@
 <%
     }
 %>
+    <img src="images/03.jpg" style="width: 100%;height: 100%;border: 0">
 <div class="dz">
     <div class="z">
         <a class="dz">注册</a>
@@ -50,10 +54,10 @@
 <div>
     <div class="menu">
         <ul>
+
             <div>
-                <li><a href="index.jsp"><img src="images/log.gif" alt="爱情旅游聚会" /></a></li>
-            </div>
-            <div><%if (Coolie.selectCookie(request,"sex")!=null&&Coolie.selectCookie(request,"sex").equals("男")){
+                <li><a href="index.jsp"><img src="/images/log.gif" alt="爱情旅游聚会" style="height: 70px" /></a></li>
+                <%if (Coolie.selectCookie(request,"sex")!=null&&Coolie.selectCookie(request,"sex").equals("男")){
             %>
                 <li><a class="change1" href="boy.jsp">情</a></li><%}else{
                 %>
@@ -65,7 +69,7 @@
         </ul>
     </div>
 </div>
-</div>
+
 <div class="bordr2">
     <%--登录界面--%>
     <div class="log">
@@ -124,7 +128,7 @@
     String str = URLDecoder.decode(co.getValue(), "utf-8");
     request.getSession().setAttribute("uname",str);
 %>
-<div style="color: #8080C0;font-size: 150%">欢迎您：<%=request.getSession().getAttribute("uname")%></div>
+<div style="color: #f9f900;font-size: 150%;position: absolute;left: 0;top: 0;">欢迎您：<%=request.getSession().getAttribute("uname")%></div>
 <%
         }
     }
@@ -143,9 +147,6 @@
 <%
     }
 %>
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>

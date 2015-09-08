@@ -177,3 +177,18 @@ p.bod{
     font-style:oblique;
     letter-spacing: 3px;
 }
+.jundu
+{
+    width:100px;
+    height:70px;
+    background:#ff8eff;
+    transition:width 5s;
+    -moz-transition:width 2s; /* Firefox 4 */
+    -webkit-transition:width 2s; /* Safari and Chrome */
+    -o-transition:width 2s; /* Opera */
+}
+
+.jundu:hover
+{
+    width:1000px;
+}

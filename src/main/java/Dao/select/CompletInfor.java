@@ -52,11 +52,11 @@ public class CompletInfor {
                 .addEntity(Regist.class)
                 .setString("1", Coolie.selectCookie(request, "zhanghao"))
                 .list();
-
         for (Object ele : list) {
             Regist regist = (Regist) ele;
             infor_id1 = regist.getId();
         }
+
         String sql1 = "update infor set information=?1 where infor_id=?2";
         coolie.addCookie(resp, "information", infor);
         Query query = see.createSQLQuery(sql1)
