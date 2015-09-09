@@ -1,10 +1,4 @@
 <%@ page import="Dao.cookie.Coolie" %>
-<%@ page import="Dao.select.Dandz" %>
-<%@ page import="org.springframework.context.support.ClassPathXmlApplicationContext" %>
-<%@ page import="org.springframework.context.ApplicationContext" %>
-<%@ page import="Dao.select.AboutMessage" %>
-<%@ page import="java.util.List" %>
-<%@ page import="Dao.popj.entity.Person" %>
 <%--
   Created by IntelliJ IDEA.
   User: online
@@ -90,30 +84,8 @@ if ((String)request.getSession().getAttribute("uname")!=null){//当获得的sess
 
     </div>
 </div>
-<article>
-    <%--<div class="r_box">--%>
-        <%--<%--%>
-            <%--ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");--%>
-            <%--AboutMessage sq = ctx.getBean("aboutmessage",AboutMessage.class);--%>
-            <%--List list =sq.selfMessage(Coolie.selectCookie(request,"zhanghao"));--%>
-            <%--for(Object ele : list){--%>
-        <%--%>--%>
 
-        <%--<%--%>
-                <%--Object object = (Object) ele;--%>
-                <%--Person person = (Person) ele;--%>
-        <%--%>--%>
-        <%--<li> <a href="bigmessage.jsp?title=<%=person.getMessage().getTitle()%>&body=<%=person.getMessage().getBody()%>"><img src="images/01.jpg"></a>--%>
-            <%--<h3><a href="bigmessage.jsp?title=<%=person.getMessage().getTitle()%>&body=<%=person.getMessage().getBody()%>">  <%=person.getMessage().getTitle()%></a></h3>--%>
-            <%--<p><%=person.getMessage().getBody()%></p>--%>
-            <%--</li>--%>
-        <%--<%--%>
 
-            <%--}--%>
-        <%--%>--%>
-
-    </div>
-</article>
 
 <%
 }

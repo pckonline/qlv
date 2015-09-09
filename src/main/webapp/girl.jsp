@@ -1,10 +1,4 @@
 <%@ page import="Dao.cookie.Coolie" %>
-<%@ page import="Dao.select.Dandz" %>
-<%@ page import="org.springframework.context.support.ClassPathXmlApplicationContext" %>
-<%@ page import="org.springframework.context.ApplicationContext" %>
-<%@ page import="Dao.select.AboutMessage" %>
-<%@ page import="java.util.List" %>
-<%@ page import="Dao.popj.entity.Person" %>
 <%--
   Created by IntelliJ IDEA.
   User: online

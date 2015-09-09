@@ -65,13 +65,28 @@ public class AboutMessage  {
         see.close();
         return list;
     }
-    //查看全部人发布的消息
-    public List allMessage(String username){
+    //查看指定的消息的内容
+    public List selfMessageBody(String username,String title){
         Session see = sf.openSession();
         Transaction tx = see.beginTransaction();
-        String sql ="select * from message_inf order by message_id desc limit 20 ";
+        String sql ="select * from message_inf where username =?1 and message_title=?2 ";
         List list = see.createSQLQuery(sql)
                 .addEntity(Person.class)
+                .setString("1",username)
+                .setString("2",title)
+                .list();
+        tx.commit();
+        see.close();
+        return list;
+    }
+    //查看全部消息
+    public List selfMessageAll(String username){
+        Session see = sf.openSession();
+        Transaction tx = see.beginTransaction();
+        String sql ="select * from message_inf where username =?1 order by message_id desc ";
+        List list = see.createSQLQuery(sql)
+                .addEntity(Person.class)
+                .setString("1",username)
                 .list();
         tx.commit();
         see.close();
