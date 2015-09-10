@@ -26,14 +26,17 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 <body>
-<div CLASS="container">
+<div CLASS="container-fluid">
 <%
     String title = new String(request.getParameter("title").getBytes("ISO-8859-1"),"utf-8");
 %>
-<div class="panel panel-default">
-    <div class="panel-body">
-        <h2 style="text-align: center"><%=title%></h2>
-    </div>
+    <div class="row">
+        <div class="col-xs-12">
+        <h1 class="panel-title" style="text-align: center">
+            <%=title%>
+        </h1>
+
+</div>
 
     <%
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
@@ -46,12 +49,22 @@
         Object object = (Object) ele;
         Person person = (Person) ele;
     %>
-        <div class="panel-footer"><h3><%=person.getMessage().getBody()%></h3></div>
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-8">
+                <h3 style="word-wrap:break-word;word-break:break-all;"><%=person.getMessage().getBody()%></h3>
+            </div>
+            <div class="col-xs-2">
+
+            </div>
+        </div>
+
     <%
 
         }
     %>
 </div>
+    </div>
 <div class="d">
     <%if (Coolie.selectCookie(request, "sex")!=null&&Coolie.selectCookie(request,"sex").equals("男")){
     %>
@@ -61,6 +74,5 @@
     <% } %>
 </div>
 
-</div>
 </body>
 </html>

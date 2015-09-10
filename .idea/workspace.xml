@@ -34,8 +34,8 @@
       <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.5" vertical-offset="568" max-vertical-offset="3925">
-              <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+            <state vertical-scroll-proportion="25.529411" vertical-offset="2068" max-vertical-offset="3925">
+              <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -51,11 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MeaageAction.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MeaageAction.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cm/action/MeaageAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45269015" vertical-offset="381" max-vertical-offset="1025">
-              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="381" max-vertical-offset="1025">
+              <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="boy.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/boy.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.352941" vertical-offset="900" max-vertical-offset="2700">
+              <caret line="46" column="30" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -66,6 +76,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="850">
               <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bigmessage.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/bigmessage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.75247526" vertical-offset="1045" max-vertical-offset="2100">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,13 +155,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/girl.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/boy.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/bigmessage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/slowlifeallmessage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/guanli/onetoone.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/popj/entity/Message.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/select/AboutMessage.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/slowlife.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cm/action/MeaageAction.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/bigmessage.jsp" />
       </list>
     </option>
   </component>
@@ -1065,12 +1085,12 @@
       <workItem from="1441679019103" duration="18484000" />
       <workItem from="1441765394456" duration="7590000" />
       <workItem from="1441789419358" duration="1522000" />
-      <workItem from="1441844706932" duration="2165000" />
+      <workItem from="1441844706932" duration="3272000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="271435000" />
+    <option name="totallyTimeSpent" value="272542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-14" width="1395" height="924" extended-state="6" />
@@ -1363,14 +1383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/boy.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="2700">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="45" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3150">
@@ -1415,22 +1427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.70873785" vertical-offset="735" max-vertical-offset="1625">
           <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bigmessage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2058212" vertical-offset="95" max-vertical-offset="1800">
-          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.5" vertical-offset="568" max-vertical-offset="3925">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1501,8 +1497,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cm/action/MeaageAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45269015" vertical-offset="381" max-vertical-offset="1025">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="381" max-vertical-offset="1025">
+          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="25.529411" vertical-offset="2068" max-vertical-offset="3925">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/boy.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.352941" vertical-offset="900" max-vertical-offset="2700">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bigmessage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75247526" vertical-offset="1045" max-vertical-offset="2100">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
