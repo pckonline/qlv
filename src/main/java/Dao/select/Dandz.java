@@ -218,35 +218,49 @@ public class Dandz {
         return information;
     }
     //查看留言
-    public String seelmessage(HttpServletRequest request,String username) throws UnsupportedEncodingException {
+    public List seelmessage(HttpServletRequest request,String username) throws UnsupportedEncodingException {
         Session see = sf.openSession();
         Transaction tx = see.beginTransaction();
         String lmessage=null;
         String sql=null;
         if (Coolie.selectCookie(request,"sex").equals("男")){
             sql = " select * from lmessage_inf l1,login l where l1.username=l.username and l.id=(select girl_id from" +
-                    " login l,love ll where ll.boy_id=l.id and l.username=?1)";
+                    " login l,love ll where ll.boy_id=l.id and l.username=?1) order by lmessage_id desc limit 10";
         }else {
             sql = " select * from lmessage_inf l1,login l where l1.username=l.username and l.id=(select boy_id from" +
-                    " login l,love ll where ll.girl_id=l.id and l.username=?1)";
+                    " login l,love ll where ll.girl_id=l.id and l.username=?1) order by lmessage_id desc limit 10";
         }
         List list=see.createSQLQuery(sql)
                 .addEntity(Lmessage.class)
                 .addEntity(Regist.class)
                 .setString("1", username)
                 .list();
-        for(Object ele : list){
-            Object[] objects = (Object[]) ele;
-            Lmessage l = (Lmessage) objects[0];
-            if (lmessage!=null){
-                lmessage+=l.getLeaveMessage();
-            }else {
-                lmessage=l.getLeaveMessage();
-            }
 
-        }
-        return lmessage;
+        return list;
     }
+    //查看全部留言
+    public List seelmessageall(HttpServletRequest request,String username) throws UnsupportedEncodingException {
+        Session see = sf.openSession();
+        Transaction tx = see.beginTransaction();
+        String lmessage=null;
+        String sql=null;
+        if (Coolie.selectCookie(request,"sex").equals("男")){
+            sql = " select * from lmessage_inf l1,login l where l1.username=l.username and l.id=(select girl_id from" +
+                    " login l,love ll where ll.boy_id=l.id and l.username=?1) order by lmessage_id desc";
+        }else {
+            sql = " select * from lmessage_inf l1,login l where l1.username=l.username and l.id=(select boy_id from" +
+                    " login l,love ll where ll.girl_id=l.id and l.username=?1) order by lmessage_id desc";
+        }
+        List list=see.createSQLQuery(sql)
+                .addEntity(Lmessage.class)
+                .addEntity(Regist.class)
+                .setString("1", username)
+                .list();
+
+        return list;
+    }
+
+
     public boolean valiUsername(String username){//验证用户名是否有人注册,有人注册:true
         boolean b=false;
         int count = 0;

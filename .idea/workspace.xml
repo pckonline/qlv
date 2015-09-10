@@ -41,21 +41,83 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slowlife.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/slowlife.jsp">
+      <file leaf-file-name="MeaageAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cm/action/MeaageAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.088235" vertical-offset="600" max-vertical-offset="2600">
-              <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1025">
+              <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MeaageAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cm/action/MeaageAction.java">
+      <file leaf-file-name="messageboard.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/messageboard.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="381" max-vertical-offset="1025">
-              <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+            <state vertical-scroll-proportion="-6.6764708" vertical-offset="573" max-vertical-offset="1750">
+              <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InforAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cm/action/InforAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1386" max-vertical-offset="2400">
+              <caret line="111" column="18" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dandz.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Dao/select/Dandz.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8203125" vertical-offset="5180" max-vertical-offset="7000">
+              <caret line="251" column="104" selection-start-line="251" selection-start-column="104" selection-end-line="251" selection-end-column="104" />
+              <folding>
+                <marker date="1441850768526" expanded="true" signature="1912:2001" placeholder="select * fro..login..." />
+                <marker date="1441850768526" expanded="true" signature="2733:2938" placeholder="select * fro..login..." />
+                <marker date="1441850768526" expanded="true" signature="2832:2937" placeholder="select girl_..love..." />
+                <marker date="1441850768526" expanded="true" signature="2977:3182" placeholder="select * fro..login..." />
+                <marker date="1441850768526" expanded="true" signature="3076:3181" placeholder="select boy_i..love..." />
+                <marker date="1441850768526" expanded="true" signature="3779:3882" placeholder="select * fro..love..." />
+                <marker date="1441850768526" expanded="true" signature="3926:4030" placeholder="select * fro..love..." />
+                <marker date="1441850768526" expanded="true" signature="6639:6713" placeholder="select * fro..login..." />
+                <marker date="1441850768526" expanded="true" signature="7538:7674" placeholder="select * fro..infor..." />
+                <marker date="1441850768526" expanded="true" signature="7574:7673" placeholder="select girl_..login..." />
+                <marker date="1441850768526" expanded="true" signature="7713:7849" placeholder="select * fro..infor..." />
+                <marker date="1441850768526" expanded="true" signature="7749:7848" placeholder="select boy_i..login..." />
+                <marker date="1441850768526" expanded="true" signature="8567:8779" placeholder="select * fro..lmessage_inf..." />
+                <marker date="1441850768526" expanded="true" signature="8644:8743" placeholder="select girl_..login..." />
+                <marker date="1441850768526" expanded="true" signature="8818:9030" placeholder="select * fro..lmessage_inf..." />
+                <marker date="1441850768526" expanded="true" signature="8895:8994" placeholder="select boy_i..login..." />
+                <marker date="1441850768526" expanded="true" signature="9615:9818" placeholder="select * fro..lmessage_inf..." />
+                <marker date="1441850768526" expanded="true" signature="9692:9791" placeholder="select girl_..login..." />
+                <marker date="1441850768526" expanded="true" signature="9857:10060" placeholder="select * fro..lmessage_inf..." />
+                <marker date="1441850768526" expanded="true" signature="9934:10033" placeholder="select boy_i..login..." />
+                <marker date="1441850768526" expanded="true" signature="10528:10565" placeholder="select * fro..login..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="seelmessage.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/seelmessage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.2647057" vertical-offset="746" max-vertical-offset="2300">
+              <caret line="37" column="118" selection-start-line="37" selection-start-column="118" selection-end-line="37" selection-end-column="118" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="seelmessageall.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/seelmessageall.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.0294118" vertical-offset="972" max-vertical-offset="2300">
+              <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -64,39 +126,33 @@
       <file leaf-file-name="boy.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/boy.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.352941" vertical-offset="900" max-vertical-offset="2700">
-              <caret line="46" column="30" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="30" />
+            <state vertical-scroll-proportion="-9.558824" vertical-offset="750" max-vertical-offset="2700">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="45" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Person.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Dao/popj/entity/Person.java">
+      <file leaf-file-name="slowlife.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/slowlife.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="850">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.294118" vertical-offset="1575" max-vertical-offset="2600">
+              <caret line="77" column="15" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bigmessage.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/bigmessage.jsp">
+      <file leaf-file-name="AboutMessage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Dao/select/AboutMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75247526" vertical-offset="1045" max-vertical-offset="2100">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aboutme.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/aboutme.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.617647" vertical-offset="698" max-vertical-offset="2275">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="2025">
+              <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+              <folding>
+                <marker date="1441846614706" expanded="true" signature="1536:1613" placeholder="select * fro..message_inf..." />
+                <marker date="1441846614706" expanded="true" signature="2027:2092" placeholder="select * fro..message_inf..." />
+                <marker date="1441846614706" expanded="true" signature="2526:2595" placeholder="select * fro..message_inf..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,7 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/l/blog/boy/blog.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/l/blog/boyblog.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/l/blog/aboutme.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/boyblog.jsp" />
@@ -141,15 +196,11 @@
         <option value="$PROJECT_DIR$/src/main/java/Dao/popj/entity/LeaveMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/popj/entity/Person1.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-hibernate.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/messageboard.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/seelmessage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/test.css" />
-        <option value="$PROJECT_DIR$/src/main/java/cm/action/InforAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/select/CompletInfor.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/aboutme.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/Dao/popj/entity/Lmessage.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Dao/select/Dandz.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/aboutanother.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/l.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
@@ -162,6 +213,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/slowlife.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cm/action/MeaageAction.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/bigmessage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/messageboard.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cm/action/InforAction.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/seelmessageall.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/seelmessage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/Dao/select/Dandz.java" />
       </list>
     </option>
   </component>
@@ -302,32 +358,6 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="guanli" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qlv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qlv" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -351,92 +381,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qlv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qlv" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dao" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qlv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qlv" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dao" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qlv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qlv" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dao" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cookie" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1085,12 +1029,12 @@
       <workItem from="1441679019103" duration="18484000" />
       <workItem from="1441765394456" duration="7590000" />
       <workItem from="1441789419358" duration="1522000" />
-      <workItem from="1441844706932" duration="3272000" />
+      <workItem from="1441844706932" duration="6097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272542000" />
+    <option name="totallyTimeSpent" value="275367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-14" width="1395" height="924" extended-state="6" />
@@ -1110,7 +1054,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2158809" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22690909" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27915633" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2828784" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1158,13 +1102,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6397059" vertical-offset="402" max-vertical-offset="1375">
           <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/allmessage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1309,14 +1246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13089006" vertical-offset="0" max-vertical-offset="764">
-          <caret line="4" column="66302" selection-start-line="4" selection-start-column="66302" selection-end-line="4" selection-end-column="66302" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Dao/popj/entity/Infor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6701031" vertical-offset="100" max-vertical-offset="1375">
@@ -1328,13 +1257,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.75301206" vertical-offset="75" max-vertical-offset="1200">
           <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/messageboard.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60046726" vertical-offset="193" max-vertical-offset="1000">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1353,25 +1275,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/seelmessage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="1175">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/aboutanother.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.059734512" vertical-offset="348" max-vertical-offset="2000">
           <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="22" selection-end-column="67" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/select/Dandz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.434511" vertical-offset="0" max-vertical-offset="6650">
-          <caret line="247" column="24" selection-start-line="247" selection-start-column="24" selection-end-line="247" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1439,58 +1347,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/slowlife.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.088235" vertical-offset="600" max-vertical-offset="2600">
-          <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+        <state vertical-scroll-proportion="25.529411" vertical-offset="2068" max-vertical-offset="3925">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bigmessage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55445546" vertical-offset="20" max-vertical-offset="2100">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Dao/popj/entity/Person.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="850">
+        <state vertical-scroll-proportion="0.5942029" vertical-offset="247" max-vertical-offset="850">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/select/AboutMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4291262" vertical-offset="429" max-vertical-offset="2025">
-          <caret line="47" column="48" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
-          <folding>
-            <marker date="1441846614706" expanded="true" signature="-1:-1" placeholder="select * fro..message_inf..." />
-            <marker date="1441846614706" expanded="true" signature="-1:-1" placeholder="select * fro..message_inf..." />
-            <marker date="1441846614706" expanded="true" signature="-1:-1" placeholder="select * fro..message_inf..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/select/CompletInfor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5640074" vertical-offset="646" max-vertical-offset="2575">
-          <caret line="59" column="57" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
-          <folding>
-            <marker date="1441696876578" expanded="true" signature="-1:-1" placeholder="select * fro..login..." />
-            <marker date="1441696876578" expanded="true" signature="-1:-1" placeholder="update infor..." />
-            <marker date="1441696876578" expanded="true" signature="-1:-1" placeholder="select * fro..login..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cm/action/InforAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6289425" vertical-offset="1011" max-vertical-offset="2375">
-          <caret line="94" column="16" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/aboutme.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.617647" vertical-offset="698" max-vertical-offset="2275">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1503,27 +1379,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/aboutme.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="25.529411" vertical-offset="2068" max-vertical-offset="3925">
-          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+        <state vertical-scroll-proportion="-6.6764708" vertical-offset="998" max-vertical-offset="2275">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1953125" vertical-offset="0" max-vertical-offset="512">
+          <caret line="4" column="90554" selection-start-line="4" selection-start-column="90554" selection-end-line="4" selection-end-column="90554" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/boy.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.352941" vertical-offset="900" max-vertical-offset="2700">
-          <caret line="46" column="30" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="30" />
+        <state vertical-scroll-proportion="-9.558824" vertical-offset="750" max-vertical-offset="2700">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="45" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bigmessage.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/select/AboutMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75247526" vertical-offset="1045" max-vertical-offset="2100">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="2025">
+          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+          <folding>
+            <marker date="1441846614706" expanded="true" signature="1536:1613" placeholder="select * fro..message_inf..." />
+            <marker date="1441846614706" expanded="true" signature="2027:2092" placeholder="select * fro..message_inf..." />
+            <marker date="1441846614706" expanded="true" signature="2526:2595" placeholder="select * fro..message_inf..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/select/CompletInfor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5761719" vertical-offset="1780" max-vertical-offset="2575">
+          <caret line="104" column="10" selection-start-line="104" selection-start-column="10" selection-end-line="104" selection-end-column="10" />
+          <folding>
+            <marker date="1441696876578" expanded="true" signature="-1:-1" placeholder="select * fro..login..." />
+            <marker date="1441696876578" expanded="true" signature="-1:-1" placeholder="update infor..." />
+            <marker date="1441696876578" expanded="true" signature="-1:-1" placeholder="select * fro..login..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cm/action/InforAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1386" max-vertical-offset="2400">
+          <caret line="111" column="18" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/messageboard.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6764708" vertical-offset="573" max-vertical-offset="1750">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/slowlife.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.294118" vertical-offset="1575" max-vertical-offset="2600">
+          <caret line="77" column="15" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/seelmessage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.2647057" vertical-offset="746" max-vertical-offset="2300">
+          <caret line="37" column="118" selection-start-line="37" selection-start-column="118" selection-end-line="37" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/seelmessageall.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0294118" vertical-offset="972" max-vertical-offset="2300">
+          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Dao/select/Dandz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8203125" vertical-offset="5180" max-vertical-offset="7000">
+          <caret line="251" column="104" selection-start-line="251" selection-start-column="104" selection-end-line="251" selection-end-column="104" />
+          <folding>
+            <marker date="1441850768526" expanded="true" signature="1912:2001" placeholder="select * fro..login..." />
+            <marker date="1441850768526" expanded="true" signature="2733:2938" placeholder="select * fro..login..." />
+            <marker date="1441850768526" expanded="true" signature="2832:2937" placeholder="select girl_..love..." />
+            <marker date="1441850768526" expanded="true" signature="2977:3182" placeholder="select * fro..login..." />
+            <marker date="1441850768526" expanded="true" signature="3076:3181" placeholder="select boy_i..love..." />
+            <marker date="1441850768526" expanded="true" signature="3779:3882" placeholder="select * fro..love..." />
+            <marker date="1441850768526" expanded="true" signature="3926:4030" placeholder="select * fro..love..." />
+            <marker date="1441850768526" expanded="true" signature="6639:6713" placeholder="select * fro..login..." />
+            <marker date="1441850768526" expanded="true" signature="7538:7674" placeholder="select * fro..infor..." />
+            <marker date="1441850768526" expanded="true" signature="7574:7673" placeholder="select girl_..login..." />
+            <marker date="1441850768526" expanded="true" signature="7713:7849" placeholder="select * fro..infor..." />
+            <marker date="1441850768526" expanded="true" signature="7749:7848" placeholder="select boy_i..login..." />
+            <marker date="1441850768526" expanded="true" signature="8567:8779" placeholder="select * fro..lmessage_inf..." />
+            <marker date="1441850768526" expanded="true" signature="8644:8743" placeholder="select girl_..login..." />
+            <marker date="1441850768526" expanded="true" signature="8818:9030" placeholder="select * fro..lmessage_inf..." />
+            <marker date="1441850768526" expanded="true" signature="8895:8994" placeholder="select boy_i..login..." />
+            <marker date="1441850768526" expanded="true" signature="9615:9818" placeholder="select * fro..lmessage_inf..." />
+            <marker date="1441850768526" expanded="true" signature="9692:9791" placeholder="select girl_..login..." />
+            <marker date="1441850768526" expanded="true" signature="9857:10060" placeholder="select * fro..lmessage_inf..." />
+            <marker date="1441850768526" expanded="true" signature="9934:10033" placeholder="select boy_i..login..." />
+            <marker date="1441850768526" expanded="true" signature="10528:10565" placeholder="select * fro..login..." />
+          </folding>
         </state>
       </provider>
     </entry>

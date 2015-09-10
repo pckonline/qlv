@@ -15,6 +15,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 /**
  * Created by online on 15-7-26.
@@ -106,7 +108,8 @@ public class InforAction extends ActionSupport {
         CompletInfor ci = ctx.getBean("complete", CompletInfor.class);
         HttpServletRequest request = ServletActionContext.getRequest();
         HttpServletResponse resp = ServletActionContext.getResponse();
-        ci.writelmessage(request,resp,getLmessage());
+        String time=new SimpleDateFormat("yyyy-MM-dd-HH:mm").format(Calendar.getInstance().getTime());
+        ci.writelmessage(request,resp,getLmessage()+"("+time+")");
         if(Coolie.selectCookie(request,"sex").equals("男")){
             return "boy";
         }else {
