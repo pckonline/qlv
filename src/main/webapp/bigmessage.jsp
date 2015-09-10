@@ -31,10 +31,9 @@
     String title = new String(request.getParameter("title").getBytes("ISO-8859-1"),"utf-8");
 %>
     <div class="row">
-        <div class="col-xs-12">
-        <h1 class="panel-title" style="text-align: center">
+        <div class="col-xs-12" style="font-size: 200%;text-align: center">
             <%=title%>
-        </h1>
+
 
 </div>
 
