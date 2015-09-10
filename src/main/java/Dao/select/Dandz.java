@@ -239,7 +239,10 @@ public class Dandz {
         return list;
     }
     //查看全部留言
-    public List seelmessageall(HttpServletRequest request,String username) throws UnsupportedEncodingException {
+    public List seelmessageall(HttpServletRequest request,String username,int fenye1) throws UnsupportedEncodingException {
+        if (fenye1<0){
+            fenye1=0;
+        }
         Session see = sf.openSession();
         Transaction tx = see.beginTransaction();
         String lmessage=null;
@@ -256,7 +259,20 @@ public class Dandz {
                 .addEntity(Regist.class)
                 .setString("1", username)
                 .list();
+        if (fenye1>list.size()){
+            System.out.println(list.size());
+            fenye1=list.size()-10;
+        }
+        if (fenye1+10>list.size()){
+            list=list.subList(fenye1,list.size());
+            System.out.println("1");
+        }else {
+            list=list.subList(fenye1,fenye1+10);
+            System.out.println("2");
+        }
 
+        tx.commit();
+        see.close();
         return list;
     }
 

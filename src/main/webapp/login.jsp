@@ -10,10 +10,15 @@
 <html>
 <head>
     <title>登录</title>
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/l.css">
     <link rel="stylesheet" type="text/css" href="css/test.css">
     <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/myJs.js">
+    </script>
+    <script type="text/javascript" src="js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript">
         function _change(){
             var imgEle=document.getElementById("img");
@@ -32,7 +37,7 @@
                 <input type="text" class="form-control" name="password" placeholder="密码" /><br/>
                 <input type="text" class="form-control" id="input2"   name="verfi" placeholder="验证码"/><br/>
                 <input type="checkbox" name="knowme">记住我
-                <input type="submit" class="sub" value="Login"/>
+                <input type="submit" class="sub1" value="Login"/>
             </form>
             <div class="vali">
                 <img style="width:130px;height: 50px" src="Login_img" id="img">
@@ -53,9 +58,6 @@
 <%
     }
 %>
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>

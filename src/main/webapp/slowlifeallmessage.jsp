@@ -32,13 +32,19 @@ if ((String)request.getSession().getAttribute("uname")!=null){//当获得的sess
 <div class="list-group">
 
     <%
+        int fenye = Integer.parseInt(request.getParameter("fenye"));
+
+    %>
+    <%
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
         AboutMessage sq = ctx.getBean("aboutmessage",AboutMessage.class);
-        List list1 =sq.selfMessageAll(Coolie.selectCookie(request, "zhanghao"));
+
+        List list1 =sq.selfMessageAll(Coolie.selectCookie(request, "zhanghao"),fenye);
         for(Object ele1 : list1){
     %>
 
     <%
+
         Object object1 = (Object) ele1;
         Person person1 = (Person) ele1;
     %>
@@ -49,6 +55,13 @@ if ((String)request.getSession().getAttribute("uname")!=null){//当获得的sess
 
         }
     %>
+    <nav>
+        <ul class="pager">
+            <li><a href="/slowlifeallmessage.jsp?fenye=<%=fenye-=10%>">Previous</a></li>
+            <li><a href="/slowlifeallmessage.jsp?fenye=<%=fenye+=20%>">Next</a></li>
+        </ul>
+    </nav>
+
 </div>
 <div class="d">
     <%if (Coolie.selectCookie(request,"sex")!=null&&Coolie.selectCookie(request,"sex").equals("男")){

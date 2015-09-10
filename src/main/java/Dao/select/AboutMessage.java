@@ -5,6 +5,7 @@ import Dao.popj.entity.Infor;
 import Dao.popj.entity.Lmessage;
 import Dao.popj.entity.Message;
 import Dao.popj.entity.Person;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -80,14 +81,26 @@ public class AboutMessage  {
         return list;
     }
     //查看全部消息
-    public List selfMessageAll(String username){
+    public List selfMessageAll(String username,int fenye){
+        if (fenye<0){
+            fenye=0;
+        }
         Session see = sf.openSession();
         Transaction tx = see.beginTransaction();
-        String sql ="select * from message_inf where username =?1 order by message_id desc ";
+        String sql ="select * from message_inf where username =?1 order by message_id desc";
         List list = see.createSQLQuery(sql)
                 .addEntity(Person.class)
                 .setString("1",username)
                 .list();
+        if (fenye>list.size()){
+            fenye=list.size()-10;
+        }
+        if (fenye+10>list.size()){
+            list=list.subList(fenye,list.size());
+        }else {
+            list=list.subList(fenye,fenye+10);
+        }
+
         tx.commit();
         see.close();
         return list;

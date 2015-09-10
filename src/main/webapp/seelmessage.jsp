@@ -35,7 +35,7 @@
 <br/>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-3"><a href="/seelmessageall.jsp" role="button" class="btn btn-success btn-lg active">查看全部留言</a> </div>
+        <div class="col-xs-3"><a href="/seelmessageall.jsp?fenye1=0" role="button" class="btn btn-success btn-lg active">查看全部留言</a> </div>
          <div class="col-xs-6">
             <div class="list-group">
     <%

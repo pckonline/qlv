@@ -58,10 +58,8 @@
                 Person person = (Person) ele;
             %>
 
-                <a href="bigmessage.jsp?title=<%=person.getMessage().getTitle()%>" class="list-group-item list-group-item-success"><%=person.getMessage().getTitle()%></a>
-
+                <a href="bigmessage.jsp?title=<%=person.getMessage().getTitle()%>" class="list-group-item list-group-item-success" ><%=person.getMessage().getTitle()%></a>
             <%
-
                 }
             %>
 
@@ -71,7 +69,7 @@
 
         </div>
         <div class="col-xs-7">
-            <a href="/slowlifeallmessage.jsp" class="btn btn-primary btn-lg active" role="button">查看全部日志</a>
+            <a href="/slowlifeallmessage.jsp?fenye=0" class="btn btn-primary btn-lg active" role="button">查看全部日志</a>
         </div>
     </div>
 </div>

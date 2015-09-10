@@ -29,6 +29,10 @@
     if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。
 %>
 
+<%
+    int fenye1 = Integer.parseInt(request.getParameter("fenye1"));
+
+%>
 <br/>
 <br/>
 <br/>
@@ -41,7 +45,7 @@
                 <%
                     ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
                     Dandz sq = ctx.getBean("dandz",Dandz.class);
-                    List list=sq.seelmessageall(request, Coolie.selectCookie(request, "zhanghao"));
+                    List list=sq.seelmessageall(request, Coolie.selectCookie(request, "zhanghao"),fenye1);
                     for(Object ele : list){
                 %>
 
@@ -55,6 +59,12 @@
                 <%
                     }
                 %>
+                <nav>
+                    <ul class="pager">
+                        <li><a href="/seelmessageall.jsp?fenye1=<%=fenye1-=10%>">Previous</a></li>
+                        <li><a href="/seelmessageall.jsp?fenye1=<%=fenye1+=20%>">Next</a></li>
+                    </ul>
+                </nav>
 
             </div>
         </div>
