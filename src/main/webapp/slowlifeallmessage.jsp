@@ -28,6 +28,7 @@
 <%
 if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。
 %>
+<div class="container">
 <div class="list-group">
 
     <%
@@ -67,6 +68,6 @@ request.getRequestDispatcher("/login.jsp").forward(request,response);//当为空
 %>
 <%
 }
-%>
+%></div>
 </body>
 </html>

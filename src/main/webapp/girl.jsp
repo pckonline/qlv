@@ -24,7 +24,7 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
 
 </head>
-<body>
+<body style="background-image: url('/images/07.jpg')">
 <%
     if ((String)request.getSession().getAttribute("uname")!=null){//当获得的session不为空时，发送欢迎语句。
 %>

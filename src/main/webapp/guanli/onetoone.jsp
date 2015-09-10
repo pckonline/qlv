@@ -16,11 +16,11 @@
 if (request.getSession().getAttribute("uname").equals("pengchengkai")){//当获得的session不为空时，发送欢迎语句。
 %>
 <s:form action="Infor_onetoone" name="onetoone">
-    <s:textfield name="boy_username" />
-    <s:textfield name="girl_username" />
-    <s:textfield name="meet_day" />
-    <s:textfield name="know_day" />
-    <s:textfield name="love_day" />
+    <s:textfield name="boy_username" />用户名(男)
+    <s:textfield name="girl_username" />用户名(女)
+    <s:textfield name="meet_day" />相遇
+    <s:textfield name="know_day" />相知
+    <s:textfield name="love_day" />相爱
     <s:submit />
 </s:form>
 <%

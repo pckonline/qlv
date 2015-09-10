@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Message {
     @Column(name = "message_title")
     private String title;
-    @Column(name = "message_body" ,length = 65530)
+    @Column(name = "message_body" ,length = 30000)
     private String body;
     @Parent
     private Person person;

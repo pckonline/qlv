@@ -26,11 +26,15 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 <body>
+<div CLASS="container">
 <%
     String title = new String(request.getParameter("title").getBytes("ISO-8859-1"),"utf-8");
 %>
-<div class="jumbotron">
-    <h1><%=title%></h1>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h2 style="text-align: center"><%=title%></h2>
+    </div>
+
     <%
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
         AboutMessage sq = ctx.getBean("aboutmessage",AboutMessage.class);
@@ -42,16 +46,12 @@
         Object object = (Object) ele;
         Person person = (Person) ele;
     %>
-    <li>
-        <h3> <%=person.getMessage().getBody()%></h3>
-    </li>
+        <div class="panel-footer"><h3><%=person.getMessage().getBody()%></h3></div>
     <%
 
         }
     %>
 </div>
-
-
 <div class="d">
     <%if (Coolie.selectCookie(request, "sex")!=null&&Coolie.selectCookie(request,"sex").equals("男")){
     %>
@@ -59,6 +59,8 @@
 %>
     <a class="dz" href="girl.jsp">返回</a>
     <% } %>
+</div>
+
 </div>
 </body>
 </html>

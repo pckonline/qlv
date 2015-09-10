@@ -79,7 +79,7 @@
             <input type="text" class="form-control" name="password" placeholder="密码" /><br/>
             <input type="text" class="form-control" id="input2"   name="verfi" placeholder="验证码"/><br/>
             <input type="checkbox" name="knowme">记住我
-            <input type="submit" class="sub" value="Login"/>
+            <input type="submit" class="sub1" value="Login"/>
         </form>
         <div class="vali">
             <img style="width:130px;height: 50px" src="Login_img" id="img">
@@ -108,7 +108,7 @@
             <input type="radio" name="sex" value="男" />男
             <input type="radio" name="sex" value="女" />女
             <input type="text" class="form-control" id="input10"   name="verfi" placeholder="验证码"/>
-            <input type="submit" class="sub" value="Regist"/>
+            <input type="submit" class="sub1" value="Regist"/>
         </form>
         <div class="vali">
             <img style="width:130px;height: 50px" src="Regi_img" id="img1">

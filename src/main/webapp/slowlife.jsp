@@ -33,7 +33,7 @@
 <br/>
 <br/>
 <br/>
-    <form action="Message_message" name="me">
+    <form action="Message_message" name="me" method="post">
         <textarea name="title" class="form-control" rows="2" placeholder="您要发表的文章标题是～～" ></textarea><br/><br/>
         <textarea name="body" class="form-control" rows="5" placeholder="您要发表的文章内容是～～" ></textarea>
         <input type="submit" Class="sub" value="yes"/>
