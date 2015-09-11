@@ -64,7 +64,7 @@
                 <li><a class="change1" href="girl.jsp">情</a></li>
                 <% } %>
                 <li><a class="change2">旅</a></li>
-                <li><a class="change3">会</a></li>
+                <li><a href="hui/firstpage.jsp" class="change3">会</a></li>
             </div>
         </ul>
     </div>

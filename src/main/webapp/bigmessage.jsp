@@ -50,8 +50,8 @@
     %>
         <div class="row">
             <div class="col-xs-2"></div>
-            <div class="col-xs-8">
-                <h3 style="word-wrap:break-word;word-break:break-all;"><%=person.getMessage().getBody()%></h3>
+            <div class="col-xs-8" style="letter-spacing: 4px">
+                    <h4 style="word-wrap:break-word;word-break:break-all;text-indent: 2em"><%=person.getMessage().getBody()%></h4>
             </div>
             <div class="col-xs-2">
 

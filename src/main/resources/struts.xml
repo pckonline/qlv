@@ -31,5 +31,8 @@
             <result name="boy">boy.jsp</result>
             <result name="girl">girl.jsp</result>
         </action>
+        <action name="Huieval_*" class="cm.action.HuievalAction" method="{1}">
+            <result name="success">/hui/firstpage.jsp</result>
+        </action>
         </package>
 </struts>
