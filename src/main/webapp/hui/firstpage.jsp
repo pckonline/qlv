@@ -47,7 +47,7 @@
                             Person person = (Person) ele;
                         %>
 
-                        <a href="/bigmessage.jsp?title=<%=person.getMessage().getTitle()%>" class="list-group-item list-group-item-success" ><%=person.getMessage().getTitle()%></a>
+                        <a href="/hui/big.jsp?title=<%=person.getMessage().getTitle()%>" class="list-group-item list-group-item-success" ><%=person.getMessage().getTitle()%></a>
                         <%
                             }
                         %>
