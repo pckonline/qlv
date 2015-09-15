@@ -5,10 +5,7 @@ import Dao.popj.entity.Infor;
 import Dao.popj.entity.Lmessage;
 import Dao.popj.entity.Message;
 import Dao.popj.entity.Person;
-import org.hibernate.SQLQuery;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import org.hibernate.*;
 import org.hibernate.type.StandardBasicTypes;
 
 
@@ -104,6 +101,23 @@ public class AboutMessage  {
         tx.commit();
         see.close();
         return list;
+    }
+    //删除文章
+    public void deletemessage(String id){
+        Session see = sf.openSession();
+        Transaction tx = see.beginTransaction();
+        System.out.println("1");
+        String sql = "select * from message_inf where message_id=?1";
+        List l= see.createSQLQuery(sql)
+                .addEntity(Person.class)
+                .setString("1",id)
+                .list();
+        for(Object obj:l){
+            Person p = (Person) obj;
+            see.delete(p);
+        }
+        tx.commit();
+        see.close();
     }
 
 }

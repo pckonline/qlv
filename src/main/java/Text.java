@@ -1,6 +1,7 @@
 import Dao.popj.entity.Love;
 import Dao.select.AboutMessage;
 import Dao.select.Dandz;
+import org.apache.commons.lang.builder.ToStringBuilder;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -15,6 +16,7 @@ public class Text {
 //        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
 //        AboutMessage sq = ctx.getBean("aboutmessage",AboutMessage.class);
 //
-//        sq.selfMessage("online");
+//        sq.deletemessage("online","阿三符");
+
     }
 }
