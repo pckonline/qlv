@@ -1,3 +1,9 @@
+<%@ page import="org.springframework.context.ApplicationContext" %>
+<%@ page import="org.springframework.context.support.ClassPathXmlApplicationContext" %>
+<%@ page import="Dao.select.CompletInfor" %>
+<%@ page import="java.util.List" %>
+<%@ page import="Dao.cookie.Coolie" %>
+<%@ page import="Dao.popj.entity.BeforeLove" %>
 <%--
   Created by IntelliJ IDEA.
   User: online
@@ -23,6 +29,45 @@ if (request.getSession().getAttribute("uname").equals("pengchengkai")){//当获�
     <s:textfield name="love_day" />相爱
     <s:submit />
 </s:form>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-3">
+            <div class="list-group">
+                
+                <%
+                    ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
+                    CompletInfor sq = ctx.getBean("complete",CompletInfor.class);
+                    List list =sq.yesLove(Coolie.selectCookie(request, "zhanghao"));
+                    for(Object ele : list){
+                %>
+
+                <%
+                    Object object = (Object) ele;
+                    BeforeLove beforeLove = (BeforeLove) ele;
+                %>
+
+                <p  class="list-group-item list-group-item-success" ><%=beforeLove.getMe_u()%>++<%=beforeLove.getOther_u()%>++<%=beforeLove.getLoveword()%></p>
+
+                <%
+                    }
+                %>
+
+            </div>
+        </div>
+        <div class="col-xs-2">
+
+        </div>
+        <div class="col-xs-7">
+        </div>
+    </div>
+</div>
 <%
 }
 else

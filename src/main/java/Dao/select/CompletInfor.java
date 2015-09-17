@@ -1,10 +1,7 @@
 package Dao.select;
 
 import Dao.cookie.Coolie;
-import Dao.popj.entity.Infor;
-import Dao.popj.entity.Lmessage;
-import Dao.popj.entity.Love;
-import Dao.popj.entity.Regist;
+import Dao.popj.entity.*;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -23,6 +20,11 @@ public class CompletInfor {
     private Infor infor;
     private Love love;
     private Lmessage lmessage;
+    private BeforeLove beforeLove;
+
+    public void setBeforeLove(BeforeLove beforeLove) {
+        this.beforeLove = beforeLove;
+    }
 
     public void setLove(Love love) {
         this.love = love;
@@ -116,5 +118,61 @@ public class CompletInfor {
         see.save(lmessage);
         tx.commit();
         see.close();
+    }
+    //写入申请情侣
+    public void writeBeforeLove(HttpServletRequest request,String other_u,String me_loveword) throws UnsupportedEncodingException {
+        Session see = sf.openSession();
+        Transaction tx = see.beginTransaction();
+        beforeLove.setMe_u(Coolie.selectCookie(request,"zhanghao"));
+        beforeLove.setOther_u(other_u);
+        beforeLove.setLoveword(me_loveword+Coolie.selectCookie(request, "sex"));
+        beforeLove.setOder("未同意");
+        see.save(beforeLove);
+        tx.commit();
+        see.close();
+    }
+
+    //如果自己是被示爱的对象，则在页面中显示并给予同意链接
+    public List yesBeforeLove(String other_u){
+        Session see = sf.openSession();
+        Transaction tx = see.beginTransaction();
+        String sql="select * from beforelove where other_u=?1 and oder='未同意'";
+        List list = see.createSQLQuery(sql)
+                .addEntity(BeforeLove.class)
+                .setString("1",other_u)
+                .list();
+        tx.commit();
+        see.close();
+        return list;
+    }
+    //确定关系
+    public void yestwo(String other_u,String me_u){
+        Session see = sf.openSession();
+        Transaction tx = see.beginTransaction();
+        String sql = "select * from beforelove where other_u=?1 and me_u=?2";
+        List l= see.createSQLQuery(sql)
+                .addEntity(BeforeLove.class)
+                .setString("1",other_u)
+                .setString("2",me_u)
+                .list();
+        for(Object obj:l){
+            BeforeLove p = (BeforeLove) obj;
+            p.setOder("同意");
+            see.update(p);
+        }
+        tx.commit();
+        see.close();
+    }
+    //查看确定关系的情侣
+    public List yesLove(String other_u){
+        Session see = sf.openSession();
+        Transaction tx = see.beginTransaction();
+        String sql="select * from beforelove where oder='同意'";
+        List list = see.createSQLQuery(sql)
+                .addEntity(BeforeLove.class)
+                .list();
+        tx.commit();
+        see.close();
+        return list;
     }
 }

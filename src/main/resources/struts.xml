@@ -31,5 +31,9 @@
             <result name="boy">boy.jsp</result>
             <result name="girl">girl.jsp</result>
         </action>
+        <action name="TellLove_*" class="cm.action.TellLoveAction" method="{1}">
+            <result name="boy">boy.jsp</result>
+            <result name="girl">girl.jsp</result>
+        </action>
         </package>
 </struts>

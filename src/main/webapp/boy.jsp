@@ -36,6 +36,15 @@ if ((String)request.getSession().getAttribute("uname")!=null){//当获得的sess
         <li><a href="slowlife.jsp"><h3>慢生活</h3></a></li>
         <li><a href="messageboard.jsp"><h3>写给她</h3></a></li>
         <li><a href="seelmessage.jsp"><h3>留言板</h3></a></li>
+
+        <%
+            if (Coolie.selectCookie(request,"anotherUname")==null){
+                %>
+        <li><a href="beforeLove.jsp"><h3>众寻她</h3></a></li>
+        <%
+            }
+        %>
+
         <li><iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=2&num=2" width="330" height="70" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></li>
     </ul>
 </header>

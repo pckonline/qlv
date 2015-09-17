@@ -106,7 +106,6 @@ public class AboutMessage  {
     public void deletemessage(String id){
         Session see = sf.openSession();
         Transaction tx = see.beginTransaction();
-        System.out.println("1");
         String sql = "select * from message_inf where message_id=?1";
         List l= see.createSQLQuery(sql)
                 .addEntity(Person.class)
