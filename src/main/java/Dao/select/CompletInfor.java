@@ -175,4 +175,21 @@ public class CompletInfor {
         see.close();
         return list;
     }
+    //申请成功
+    public void alyestwo(String me_u){
+        Session see = sf.openSession();
+        Transaction tx = see.beginTransaction();
+        String sql = "select * from beforelove where me_u=?1";//这样可样把申请人所有的申请都取消只保存同意的一条
+        List l= see.createSQLQuery(sql)
+                .addEntity(BeforeLove.class)
+                .setString("1",me_u)
+                .list();
+        for(Object obj:l){
+            BeforeLove p = (BeforeLove) obj;
+            p.setOder("已批改");
+            see.update(p);
+        }
+        tx.commit();
+        see.close();
+    }
 }

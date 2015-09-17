@@ -27,6 +27,7 @@ if (request.getSession().getAttribute("uname").equals("pengchengkai")){//当获�
     <s:textfield name="meet_day" />相遇
     <s:textfield name="know_day" />相知
     <s:textfield name="love_day" />相爱
+    <s:textfield name="me_u" />申请者
     <s:submit />
 </s:form>
 
@@ -40,7 +41,7 @@ if (request.getSession().getAttribute("uname").equals("pengchengkai")){//当获�
     <div class="row">
         <div class="col-xs-3">
             <div class="list-group">
-                
+
                 <%
                     ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-hibernate.xml");
                     CompletInfor sq = ctx.getBean("complete",CompletInfor.class);
@@ -53,7 +54,7 @@ if (request.getSession().getAttribute("uname").equals("pengchengkai")){//当获�
                     BeforeLove beforeLove = (BeforeLove) ele;
                 %>
 
-                <p  class="list-group-item list-group-item-success" ><%=beforeLove.getMe_u()%>++<%=beforeLove.getOther_u()%>++<%=beforeLove.getLoveword()%></p>
+                <p  class="list-group-item list-group-item-success" >申请者：<%=beforeLove.getMe_u()%>+同意人：<%=beforeLove.getOther_u()%>+申请者性别：<%=beforeLove.getLoveword()%></p>
 
                 <%
                     }

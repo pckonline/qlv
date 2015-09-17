@@ -32,6 +32,15 @@ public class InforAction extends ActionSupport {
     private String meet_day;
     private String know_day;
     private String love_day;
+    private String me_u;
+
+    public String getMe_u() {
+        return me_u;
+    }
+
+    public void setMe_u(String me_u) {
+        this.me_u = me_u;
+    }
 
     public String getLmessage() {
         return lmessage;
@@ -122,6 +131,7 @@ public class InforAction extends ActionSupport {
         CompletInfor ci = ctx.getBean("complete", CompletInfor.class);
         HttpServletRequest request = ServletActionContext.getRequest();
         ci.insetql(request,ci.selectid(request,getBoy_username()),ci.selectid(request,getGirl_username()),getMeet_day(),getKnow_day(),getLove_day());
+
         setBoy_username("");
         setGirl_username("");
         setLove_day("");
